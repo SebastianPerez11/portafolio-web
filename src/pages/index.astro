@@ -17,20 +17,20 @@ import IconVercel from "../icons/IconVercel.astro";
   <NavBar />
   <main class="w-full flex flex-col justify-center items-center">
     <section
-      class="w-full max-w-[1920px] min-h-screen flex flex-col items-center justify-end gap-14 px-24 text-white"
+      class="w-full max-w-[1920px] h-screen flex flex-col items-center justify-end gap-14 xl:gap-0 px-24 text-white"
     >
       <header class="w-full flex justify-between items-center">
         <aside class="flex flex-col gap-6">
-          <a href="/"><IconGitHub /></a>
-          <a href="/"><IconLinkedin /></a>
-          <a href="/"><IconGmail /></a>
+          <a href="/"><IconGitHub class="w-10 xl:w-8" /></a>
+          <a href="/"><IconLinkedin class="w-10 xl:w-8"  /></a>
+          <a href="/"><IconGmail class="w-10 xl:w-8" /></a>
         </aside>
-        <span class="w-[600px] z-10 relative border-2 h-[340px]">
+        <span class="w-[600px] z-10 relative border-2 h-[340px] xl:w-[500px] xl:h-[240px]">
           <span
-            class="bg-black w-full absolute flex justify-center items-center h-full border-2 -top-6 right-6"
+            class="bg-black w-full absolute flex justify-center items-center h-full border-2 -top-6 right-6 xl:-top-4 xl:right-4"
           >
             <h1
-              class="text-8xl z-40 w-[9ch] text-center font-bold leading-none"
+              class="text-8xl xl:text-7xl z-40 w-[9ch] text-center font-bold leading-none"
             >
               Sebastian Perez
             </h1>
@@ -38,17 +38,17 @@ import IconVercel from "../icons/IconVercel.astro";
         </span>
       </header>
       <footer class="w-full overflow-hidden">
-        <p class="text-[26px] w-[28ch] text-pretty">
+        <p class="text-2xl xl:text-xl w-[28ch] mb-2 text-pretty">
           Aportando valor y resultados en cada desarrollo, diseños modernos
           adaptados a tus necesidades
         </p>
-        <h2 class="text-center text-[180px] font-bold leading-none">
+        <h2 class="text-center xl:text-[120px] text-[180px] font-bold leading-none">
           WEB DEVELOPER
         </h2>
       </footer>
     </section>
 
-    <section
+    <!-- <section
       class="w-full max-w-[1920px] min-h-screen flex flex-col items-center justify-end gap-14 px-14 text-white"
     >
       <header class="mb-20 w-full flex justify-between items-center">
@@ -100,6 +100,6 @@ import IconVercel from "../icons/IconVercel.astro";
           SOBRE MI
         </h2>
       </footer>
-    </section>
+    </section> -->
   </main>
 </Layout>
