@@ -6,6 +6,9 @@ export default {
 			fontFamily: {
 				sansation: ['Sansation', 'ui-sans-serif', 'system-ui'],
 			  },
+			  gridTemplateColumns: {
+				'auto-proyects': 'repeat(auto-fit, minmax(600px, 1fr))',
+			}
 		},
 	},
 	plugins: [],

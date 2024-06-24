@@ -11,95 +11,117 @@ import IconCss from "../icons/IconCss.astro";
 import IconJavaScript from "../icons/IconJavaScript.astro";
 import IconFigma from "../icons/IconFigma.astro";
 import IconVercel from "../icons/IconVercel.astro";
+
+import TitleSection from "../components/TitleSection.astro";
+import CardProyect from "../components/CardProyect.astro";
 ---
 
 <Layout title="Sebastian Perez">
   <NavBar />
-  <main class="w-full flex flex-col justify-center items-center">
+  <main
+    id="inicio"
+    class="w-full h-full flex flex-col justify-center items-center"
+  >
     <section
-      class="w-full max-w-[1920px] h-screen flex flex-col items-center justify-end gap-14 xl:gap-0 px-24 text-white"
+      class="w-full max-h-full h-[900px] max-w-[1920px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
     >
-      <header class="w-full flex justify-between items-center">
+      <header class="w-full h-full flex justify-between items-center mt-20">
         <aside class="flex flex-col gap-6">
-          <a href="/"><IconGitHub class="w-10 xl:w-8" /></a>
-          <a href="/"><IconLinkedin class="w-10 xl:w-8"  /></a>
-          <a href="/"><IconGmail class="w-10 xl:w-8" /></a>
+          <a href="/"><IconGitHub class="2xl:w-9 xl:w-8" /></a>
+          <a href="/"><IconLinkedin class="2xl:w-9 xl:w-8" /></a>
+          <a href="/"><IconGmail class="2xl:w-9 xl:w-8" /></a>
         </aside>
-        <span class="w-[600px] z-10 relative border-2 h-[340px] xl:w-[500px] xl:h-[240px]">
+        <div
+          class="2xl:w-[640px] 2xl:h-[340px] relative z-10 border-2 xl:w-[500px] xl:h-[240px]"
+        >
           <span
             class="bg-black w-full absolute flex justify-center items-center h-full border-2 -top-6 right-6 xl:-top-4 xl:right-4"
           >
             <h1
-              class="text-8xl xl:text-7xl z-40 w-[9ch] text-center font-bold leading-none"
+              class="2xl:text-[86px] xl:text-7xl z-40 w-[9ch] text-center font-bold leading-none"
             >
               Sebastian Perez
             </h1>
           </span>
-        </span>
+        </div>
       </header>
-      <footer class="w-full overflow-hidden">
-        <p class="text-2xl xl:text-xl w-[28ch] mb-2 text-pretty">
+      <footer class="w-full">
+        <p class="2xl:text-[26px] xl:text-xl w-[28ch] mb-8 text-pretty">
           Aportando valor y resultados en cada desarrollo, diseños modernos
           adaptados a tus necesidades
         </p>
-        <h2 class="text-center xl:text-[120px] text-[180px] font-bold leading-none">
-          WEB DEVELOPER
-        </h2>
+        <TitleSection title="WEB DEVELOPER" />
       </footer>
     </section>
 
-    <!-- <section
-      class="w-full max-w-[1920px] min-h-screen flex flex-col items-center justify-end gap-14 px-14 text-white"
+    <span id="sobremi"></span>
+
+    <section
+      class="w-full max-h-full h-[900px] max-w-[1920px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
     >
-      <header class="mb-20 w-full flex justify-between items-center">
+      <header class="w-full h-full flex justify-between items-center mt-20">
         <div
-          class="flex ml-6 justify-center items-center h-full flex-col gap-10"
+          class="h-full flex flex-col justify-center items-center gap-10 ml-6 mt-12"
         >
-          <div class="w-[700px] z-10 relative border-2 h-[120px]">
+          <div class="w-[700px] h-[140px] border-2 relative z-10">
             <span
               class="bg-black absolute flex justify-center items-center w-full h-full border-2 -top-6 right-6"
             >
-              <h1
-                class="text-7xl z-40 w-[9ch] text-center font-bold leading-none"
-              >
+              <h1 class="text-7xl z-40 text-center font-bold leading-none">
                 Tecnologías
               </h1>
             </span>
           </div>
 
           <ul class="flex gap-8 justify-center items-center">
-            <IconHtml />
-            <IconCss />
-            <IconJavaScript />
-            <IconAstro />
-            <IconTailwind />
-            <IconFigma />
+            <IconHtml class="w-12" />
+            <IconCss class="w-12" />
+            <IconJavaScript class="w-12" />
+            <IconAstro class="w-12" />
+            <IconTailwind class="w-12" />
+            <IconFigma class="w-12" />
           </ul>
         </div>
 
-        <div class="flex flex-col items-center gap-">
-          <p class="text-[26px] w-[40ch]">
+        <div class="flex flex-col items-center gap-4">
+          <p class="text-[26px] w-[40ch] text-pretty">
             Soy Sebas, Desarrollador Web Front End y Técnico en Análisis de
             Sistemas.
           </p>
-          <p class="text-[26px] w-[40ch]">
+          <p class="text-[26px] w-[40ch] text-pretty">
             Me destaco en el diseño y desarrollo de paginas webs, creando
             experiencias amigables a los usuarios.
           </p>
-          <p class="text-[26px] w-[40ch]">
+          <p class="text-[26px] w-[40ch] text-pretty">
             Ofrezco webs optimizadas, con un gran rendimiento, en cuanto a
             velocidad de carga, SEO y estructuración del sitio.
           </p>
         </div>
       </header>
-      <footer class="overflow-hidden">
+      <footer class="w-full">
         <p class="text-2xl text-center text-pretty mb-8 font-medium">
           HTML5 - CSS3 - JAVASCRIPT - ASTRO - TAILWIND- FIGMA- VERCEL
         </p>
-        <h2 class="text-center text-[200px] font-bold leading-none">
-          SOBRE MI
-        </h2>
+        <TitleSection title="SOBRE MI" />
       </footer>
-    </section> -->
+    </section>
+
+    <span id="proyectos"></span>
+
+    <section
+      class="w-full h-full max-w-[1920px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+    >
+      <header
+        class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20"
+      >
+        <CardProyect />
+        <CardProyect />
+        <CardProyect />
+        <CardProyect />
+      </header>
+      <footer class="w-full">
+        <TitleSection title="PROYECTOS" />
+      </footer>
+    </section>
   </main>
 </Layout>
