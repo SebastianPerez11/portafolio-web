@@ -14,6 +14,7 @@ import IconVercel from "../icons/IconVercel.astro";
 
 import TitleSection from "../components/TitleSection.astro";
 import CardProyect from "../components/CardProyect.astro";
+import ButtonProyect from "../components/ButtonProyect.astro";
 ---
 
 <Layout title="Sebastian Perez">
@@ -23,7 +24,7 @@ import CardProyect from "../components/CardProyect.astro";
     class="w-full h-full flex flex-col justify-center items-center"
   >
     <section
-      class="w-full max-h-full h-[900px] max-w-[1920px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
     >
       <header class="w-full h-full flex justify-between items-center mt-20">
         <aside class="flex flex-col gap-6">
@@ -46,7 +47,7 @@ import CardProyect from "../components/CardProyect.astro";
         </div>
       </header>
       <footer class="w-full">
-        <p class="2xl:text-[26px] xl:text-xl w-[28ch] mb-8 text-pretty">
+        <p class="2xl:text-2xl xl:text-xl w-[28ch] mb-8 text-pretty">
           Aportando valor y resultados en cada desarrollo, diseños modernos
           adaptados a tus necesidades
         </p>
@@ -57,13 +58,15 @@ import CardProyect from "../components/CardProyect.astro";
     <span id="sobremi"></span>
 
     <section
-      class="w-full max-h-full h-[900px] max-w-[1920px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
     >
-      <header class="w-full h-full flex justify-between items-center mt-20">
+      <header
+        class="w-full h-full flex justify-between items-center gap-20 mt-20"
+      >
         <div
-          class="h-full flex flex-col justify-center items-center gap-10 ml-6 mt-12"
+          class="w-full h-full flex flex-col justify-center items-center gap-10 ml-6 mt-12"
         >
-          <div class="w-[700px] h-[140px] border-2 relative z-10">
+          <div class="w-full h-[140px] border-2 relative z-10">
             <span
               class="bg-black absolute flex justify-center items-center w-full h-full border-2 -top-6 right-6"
             >
@@ -80,19 +83,22 @@ import CardProyect from "../components/CardProyect.astro";
             <IconAstro class="w-12" />
             <IconTailwind class="w-12" />
             <IconFigma class="w-12" />
+            <IconVercel class="w-12" />
           </ul>
         </div>
 
-        <div class="flex flex-col items-center gap-4">
-          <p class="text-[26px] w-[40ch] text-pretty">
+        <div
+          class="w-full h-full mt-12 flex flex-col gap-3 justify-center items-end"
+        >
+          <p class="text-2xl w-full text-pretty">
             Soy Sebas, Desarrollador Web Front End y Técnico en Análisis de
             Sistemas.
           </p>
-          <p class="text-[26px] w-[40ch] text-pretty">
+          <p class="text-2xl w-full text-pretty">
             Me destaco en el diseño y desarrollo de paginas webs, creando
-            experiencias amigables a los usuarios.
+            experiencias amigables para los usuarios.
           </p>
-          <p class="text-[26px] w-[40ch] text-pretty">
+          <p class="text-2xl w-full text-pretty">
             Ofrezco webs optimizadas, con un gran rendimiento, en cuanto a
             velocidad de carga, SEO y estructuración del sitio.
           </p>
@@ -100,7 +106,7 @@ import CardProyect from "../components/CardProyect.astro";
       </header>
       <footer class="w-full">
         <p class="text-2xl text-center text-pretty mb-8 font-medium">
-          HTML5 - CSS3 - JAVASCRIPT - ASTRO - TAILWIND- FIGMA- VERCEL
+          HTML5 - CSS3 - JAVASCRIPT - ASTRO - TAILWIND - FIGMA - VERCEL
         </p>
         <TitleSection title="SOBRE MI" />
       </footer>
@@ -109,15 +115,66 @@ import CardProyect from "../components/CardProyect.astro";
     <span id="proyectos"></span>
 
     <section
-      class="w-full h-full max-w-[1920px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
     >
       <header
         class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20"
       >
-        <CardProyect />
-        <CardProyect />
-        <CardProyect />
-        <CardProyect />
+        <CardProyect
+          title="WEB DAFA SEGUROS"
+          description="Página web informativa para una empresa Productora Asesora de Seguros en Argentina. Se utilizo la API View Transition. (En Producción)"
+        >
+          <slot slot="icons">
+            <IconAstro class="w-8" />
+            <IconTailwind class="w-8" />
+          </slot>
+          <slot slot="buttons">
+            <ButtonProyect text="Ver sitio" href="./" />
+            <ButtonProyect text="Ver repositorio" href="./" />
+          </slot>
+        </CardProyect>
+
+        <CardProyect
+          title="LANDING TESLA"
+          description="Se desarrollo una landing page teniendo de referencia la página original de Tesla (Proyecto realizado para el programa Codo a Codo)."
+        >
+          <slot slot="icons">
+            <IconAstro class="w-8" />
+            <IconTailwind class="w-8" />
+          </slot>
+          <slot slot="buttons">
+            <ButtonProyect text="Ver sitio" href="./" />
+            <ButtonProyect text="Ver repositorio" href="./" />
+          </slot>
+        </CardProyect>
+
+        <CardProyect
+          title="LANDING MISIÓN SALTA"
+          description="ONG Misión Salta brinda principalmente información sobre el propósito, objetivo, entre más puntos importantes de la misión."
+        >
+          <slot slot="icons">
+            <IconAstro class="w-8" />
+            <IconTailwind class="w-8" />
+          </slot>
+          <slot slot="buttons">
+            <ButtonProyect text="Ver sitio" href="./" />
+            <ButtonProyect text="Ver repositorio" href="./" />
+          </slot>
+        </CardProyect>
+
+        <CardProyect
+          title="PROXIMAMENTE..."
+          description="Página web informativa para una empresa Productora Asesora de Seguros en Argentina. (En Producción)"
+        >
+          <slot slot="icons">
+            <IconAstro class="w-8" />
+            <IconTailwind class="w-8" />
+          </slot>
+          <slot slot="buttons">
+            <ButtonProyect text="Ver sitio" href="./" />
+            <ButtonProyect text="Ver repositorio" href="./" />
+          </slot>
+        </CardProyect>
       </header>
       <footer class="w-full">
         <TitleSection title="PROYECTOS" />
