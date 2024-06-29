@@ -70,9 +70,9 @@ import ButtonProyect from "../components/ButtonProyect.astro";
             <span
               class="bg-black absolute flex justify-center items-center w-full h-full border-2 -top-6 right-6"
             >
-              <h1 class="text-7xl z-40 text-center font-bold leading-none">
+              <h2 class="text-7xl z-40 text-center font-bold leading-none">
                 Tecnologías
-              </h1>
+              </h2>
             </span>
           </div>
 
@@ -150,7 +150,7 @@ import ButtonProyect from "../components/ButtonProyect.astro";
 
         <CardProyect
           title="LANDING MISIÓN SALTA"
-          description="ONG Misión Salta brinda principalmente información sobre el propósito, objetivo, entre más puntos importantes de la misión."
+          description="Web de la ONG - Misión Salta brinda principalmente información sobre el propósito, objetivo, entre más puntos importantes de la misión."
         >
           <slot slot="icons">
             <IconAstro class="w-8" />
@@ -178,6 +178,51 @@ import ButtonProyect from "../components/ButtonProyect.astro";
       </header>
       <footer class="w-full">
         <TitleSection title="PROYECTOS" />
+      </footer>
+    </section>
+
+    <span id="experiencia"></span>
+
+    <section
+      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+    >
+      <header
+        class="w-full h-full flex justify-between items-center gap-20 mt-20"
+      >
+        <div>
+          <time class="text-lg">04-08-2023</time>
+          <h4 class="text-2xl">Proyecto Landing Page Misión Salta</h4>
+          <p>
+            
+          </p>
+          <p>
+            Recibi una mentoria por parte de un Diseñador UX-UI profesional,
+            desarrollamos en conjunto una landing page para la ONG Misión Salta.
+            Adquiri nuevos conocimientos de como realizar un desarrollo optimo,
+            utilizando buenas practias, tanto en el enmaquetado, el estilado y
+            el analisis pre-desarrollo de una web. Ademas conoci diferentes
+            tecnologias y herramientas que me facilitaron la experiencia de
+            desarrollo (Trello, Git, GitHub, Figma, Metodologias, Diseños
+            limpios y Accesibles)
+          </p>
+        </div>
+      </header>
+      <footer class="w-full">
+        <TitleSection title="EXPERIENCIA" />
+      </footer>
+    </section>
+
+    <span id="contacto"></span>
+
+    <section
+      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+    >
+      <header
+        class="w-full h-full flex justify-between items-center gap-20 mt-20"
+      >
+      </header>
+      <footer class="w-full">
+        <TitleSection title="CONTACTO" />
       </footer>
     </section>
   </main>
