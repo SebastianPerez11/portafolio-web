@@ -8,6 +8,7 @@ export default {
 			  },
 			  gridTemplateColumns: {
 				'auto-proyects': 'repeat(auto-fit, minmax(460px, 1fr))',
+				'auto-experience': 'repeat(auto-fit, minmax(300px, 1fr))',
 			}
 		},
 	},

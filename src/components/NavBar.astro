@@ -1,29 +1,20 @@
 ---
-
+import NavLink from "../components/NavLink.astro";
+import Button from "../components/Button.astro";
 ---
 
 <header class="w-full flex justify-center fixed z-20">
-    <nav
-      class="w-full max-w-[1440px] py-10 px-14 flex justify-between items-center text-white"
-    >
-      <span class="text-2xl">Portafolio Web</span>
-      <ul class="flex gap-14 text-lg">
-        <li>
-          <a href="#inicio">Inicio</a>
-        </li>
-        <li>
-          <a href="#sobremi">Sobre mi</a>
-        </li>
-        <li>
-          <a href="#proyectos">Proyectos</a>
-        </li>
-        <li>
-          <a href="#experiencia">Experiencia</a>
-        </li>
-        <li>
-          <a href="#contacto">Contacto</a>
-        </li>
-      </ul>
-      <a class="text-lg border-2 rounded-sm px-6 py-1" href="/">Descargar Cv</a>
-    </nav>
-  </header>
+  <nav
+    class="w-full max-w-[1440px] py-10 px-14 flex justify-between items-center text-white"
+  >
+    <span class="text-2xl font-bold">Portafolio Web</span>
+    <ul class="flex gap-14 text-lg">
+      <NavLink text="Inicio" href="#inicio" />
+      <NavLink text="Sobre mi" href="#sobremi" />
+      <NavLink text="Proyectos" href="#proyectos" />
+      <NavLink text="Experiencia" href="#experiencia" />
+      <NavLink text="Contacto" href="#contacto" />
+    </ul>
+    <Button text="Descargar Cv" />
+  </nav>
+</header>

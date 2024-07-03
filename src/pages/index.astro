@@ -1,20 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
-import IconGitHub from "../icons/IconGitHub.astro";
-import IconLinkedin from "../icons/IconLinkedin.astro";
-import IconGmail from "../icons/IconGmail.astro";
-import IconAstro from "../icons/IconAstro.astro";
-import IconTailwind from "../icons/IconTailwind.astro";
-import IconHtml from "../icons/IconHtml.astro";
-import IconCss from "../icons/IconCss.astro";
-import IconJavaScript from "../icons/IconJavaScript.astro";
-import IconFigma from "../icons/IconFigma.astro";
-import IconVercel from "../icons/IconVercel.astro";
+import IconGitHub from "../assets/icons/IconGitHub.astro";
+import IconLinkedin from "../assets/icons/IconLinkedin.astro";
+import IconGmail from "../assets/icons/IconGmail.astro";
+import IconAstro from "../assets/icons/IconAstro.astro";
+import IconTailwind from "../assets/icons/IconTailwind.astro";
+import IconHtml from "../assets/icons/IconHtml.astro";
+import IconCss from "../assets/icons/IconCss.astro";
+import IconJavaScript from "../assets/icons/IconJavaScript.astro";
+import IconFigma from "../assets/icons/IconFigma.astro";
+import IconVercel from "../assets/icons/IconVercel.astro";
 
 import TitleSection from "../components/TitleSection.astro";
 import CardProyect from "../components/CardProyect.astro";
-import ButtonProyect from "../components/ButtonProyect.astro";
+import Button from "../components/Button.astro";
+
+import HeroSection from "../layouts/HeroSection.astro";
 ---
 
 <Layout title="Sebastian Perez">
@@ -23,85 +25,55 @@ import ButtonProyect from "../components/ButtonProyect.astro";
     id="inicio"
     class="w-full h-full flex flex-col justify-center items-center"
   >
-    <section
-      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
-    >
-      <header class="w-full h-full flex justify-between items-center mt-20">
-        <aside class="flex flex-col gap-6">
-          <a href="/"><IconGitHub class="2xl:w-9 xl:w-8" /></a>
-          <a href="/"><IconLinkedin class="2xl:w-9 xl:w-8" /></a>
-          <a href="/"><IconGmail class="2xl:w-9 xl:w-8" /></a>
-        </aside>
-        <div
-          class="2xl:w-[640px] 2xl:h-[340px] relative z-10 border-2 xl:w-[500px] xl:h-[240px]"
-        >
-          <span
-            class="bg-black w-full absolute flex justify-center items-center h-full border-2 -top-6 right-6 xl:-top-4 xl:right-4"
-          >
-            <h1
-              class="2xl:text-[86px] xl:text-7xl z-40 w-[9ch] text-center font-bold leading-none"
-            >
-              Sebastian Perez
-            </h1>
-          </span>
-        </div>
-      </header>
-      <footer class="w-full">
-        <p class="2xl:text-2xl xl:text-xl w-[28ch] mb-8 text-pretty">
-          Aportando valor y resultados en cada desarrollo, diseños modernos
-          adaptados a tus necesidades
-        </p>
-        <TitleSection title="WEB DEVELOPER" />
-      </footer>
-    </section>
+ 
+    <HeroSection/>
 
     <span id="sobremi"></span>
 
     <section
-      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-10 text-white"
     >
       <header
         class="w-full h-full flex justify-between items-center gap-20 mt-20"
       >
+        <div class="w-full h-full mt-12 flex flex-col justify-center text-xl">
+          <h6 class="font-bold text-2xl mb-3">Un poco sobre mi</h6>
+          <p class="w-full text-pretty mb-3">
+            Soy Sebas, Desarrollador Web Front End y Técnico en Análisis de
+            Sistemas.
+          </p>
+          <p class="w-full text-pretty mb-3">
+            Me destaco en el diseño y desarrollo de paginas webs, creando
+            experiencias amigables para los usuarios.
+          </p>
+          <p class="w-full text-pretty mb-3">
+            Ofrezco webs optimizadas, con un gran rendimiento, en cuanto a
+            velocidad de carga, SEO y estructuración del sitio.
+          </p>
+        </div>
+
         <div
-          class="w-full h-full flex flex-col justify-center items-center gap-10 ml-6 mt-12"
+          class="w-full h-full flex flex-col justify-center items-center gap-10 mt-12"
         >
-          <div class="w-full h-[140px] border-2 relative z-10">
+          <div class="w-full h-[130px] border-2 relative z-10">
             <span
               class="bg-black absolute flex justify-center items-center w-full h-full border-2 -top-6 right-6"
             >
-              <h2 class="text-7xl z-40 text-center font-bold leading-none">
+              <h2 class="text-6xl z-40 text-center font-bold leading-none">
                 Tecnologías
               </h2>
             </span>
           </div>
 
           <ul class="flex gap-8 justify-center items-center">
-            <IconHtml class="w-12" />
-            <IconCss class="w-12" />
-            <IconJavaScript class="w-12" />
-            <IconAstro class="w-12" />
-            <IconTailwind class="w-12" />
-            <IconFigma class="w-12" />
-            <IconVercel class="w-12" />
+            <IconHtml class="w-10" />
+            <IconCss class="w-10" />
+            <IconJavaScript class="w-10" />
+            <IconAstro class="w-10" />
+            <IconTailwind class="w-10" />
+            <IconFigma class="w-10" />
+            <IconVercel class="w-10" />
           </ul>
-        </div>
-
-        <div
-          class="w-full h-full mt-12 flex flex-col gap-3 justify-center items-end"
-        >
-          <p class="text-2xl w-full text-pretty">
-            Soy Sebas, Desarrollador Web Front End y Técnico en Análisis de
-            Sistemas.
-          </p>
-          <p class="text-2xl w-full text-pretty">
-            Me destaco en el diseño y desarrollo de paginas webs, creando
-            experiencias amigables para los usuarios.
-          </p>
-          <p class="text-2xl w-full text-pretty">
-            Ofrezco webs optimizadas, con un gran rendimiento, en cuanto a
-            velocidad de carga, SEO y estructuración del sitio.
-          </p>
         </div>
       </header>
       <footer class="w-full">
@@ -115,7 +87,7 @@ import ButtonProyect from "../components/ButtonProyect.astro";
     <span id="proyectos"></span>
 
     <section
-      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-10 text-white"
     >
       <header
         class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20"
@@ -129,8 +101,8 @@ import ButtonProyect from "../components/ButtonProyect.astro";
             <IconTailwind class="w-8" />
           </slot>
           <slot slot="buttons">
-            <ButtonProyect text="Ver sitio" href="./" />
-            <ButtonProyect text="Ver repositorio" href="./" />
+            <Button text="Ver sitio" href="./" />
+            <Button text="Ver repositorio" href="./" />
           </slot>
         </CardProyect>
 
@@ -143,8 +115,8 @@ import ButtonProyect from "../components/ButtonProyect.astro";
             <IconTailwind class="w-8" />
           </slot>
           <slot slot="buttons">
-            <ButtonProyect text="Ver sitio" href="./" />
-            <ButtonProyect text="Ver repositorio" href="./" />
+            <Button text="Ver sitio" href="./" />
+            <Button text="Ver repositorio" href="./" />
           </slot>
         </CardProyect>
 
@@ -157,8 +129,8 @@ import ButtonProyect from "../components/ButtonProyect.astro";
             <IconTailwind class="w-8" />
           </slot>
           <slot slot="buttons">
-            <ButtonProyect text="Ver sitio" href="./" />
-            <ButtonProyect text="Ver repositorio" href="./" />
+            <Button text="Ver sitio" href="./" />
+            <Button text="Ver repositorio" href="./" />
           </slot>
         </CardProyect>
 
@@ -171,8 +143,8 @@ import ButtonProyect from "../components/ButtonProyect.astro";
             <IconTailwind class="w-8" />
           </slot>
           <slot slot="buttons">
-            <ButtonProyect text="Ver sitio" href="./" />
-            <ButtonProyect text="Ver repositorio" href="./" />
+            <Button text="Ver sitio" href="./" />
+            <Button text="Ver repositorio" href="./" />
           </slot>
         </CardProyect>
       </header>
@@ -187,24 +159,53 @@ import ButtonProyect from "../components/ButtonProyect.astro";
       class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
     >
       <header
-        class="w-full h-full flex justify-between items-center gap-20 mt-20"
+        class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20"
       >
-        <div>
+        <div class="w-full">
           <time class="text-lg">04-08-2023</time>
-          <h4 class="text-2xl">Proyecto Landing Page Misión Salta</h4>
-          <p>
-            
+          <h4 class="text-2xl font-bold mb-3">
+            Proyecto Landing Page Misión Salta
+          </h4>
+          <p class="w-full text-xl text-pretty mb-2">
+            El objetivo de la creacion de la landing page fue poder lograr
+            unificar la informacion, dar a conocer con claridad que es "Mision
+            Salta".
           </p>
-          <p>
-            Recibi una mentoria por parte de un Diseñador UX-UI profesional,
-            desarrollamos en conjunto una landing page para la ONG Misión Salta.
-            Adquiri nuevos conocimientos de como realizar un desarrollo optimo,
-            utilizando buenas practias, tanto en el enmaquetado, el estilado y
-            el analisis pre-desarrollo de una web. Ademas conoci diferentes
-            tecnologias y herramientas que me facilitaron la experiencia de
-            desarrollo (Trello, Git, GitHub, Figma, Metodologias, Diseños
-            limpios y Accesibles)
+          <p class="w-full text-xl text-pretty">
+            Cuales son sus objetivos, quienes pueden colaborar en esta causa y a
+            su vez plasmar las principales actividades que se realizan en dicha
+            misión.
           </p>
+
+          <div class="w-full mt-3">
+            <h4 class="text-2xl font-bold mb-3">Pasos del proyecto</h4>
+            <div class="w-full grid grid-cols-auto-experience text-xl gap-2">
+              <span>1) Recopilación de información.</span>
+              <span>2) Benchmarking.</span>
+              <span>3) Arquitectura de la información.</span>
+              <span>4) Wireframes en baja fidelidad.</span>
+              <span>5) Creación de Guía de Estilos.</span>
+              <span>6) Wireframes en alta fidelidad.</span>
+              <span>7) Creación de repositorio.</span>
+              <span>8) Desarrollo.</span>
+              <span>9) Testeo.</span>
+              <span>10) Despliegue.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <picture class="w-full">
+            <img class="rounded-md" src="/src/assets/img/2.jpg" alt="" />
+            <p class="mt-3 text-lg text-pretty">
+              Ilustraciones de las diferentes partes de la UI, recopiladas de
+              las distintas etapas del proyecto en Figma.
+            </p>
+          </picture>
+          <footer class="mt-5 flex gap-3">
+            <Button class="w-full" text="Más Información" href="/" />
+            <Button class="w-full" text="Ver Proyecto" href="/" />
+          </footer>
         </div>
       </header>
       <footer class="w-full">
@@ -220,6 +221,80 @@ import ButtonProyect from "../components/ButtonProyect.astro";
       <header
         class="w-full h-full flex justify-between items-center gap-20 mt-20"
       >
+        <div class="w-full flex flex-col">
+          <h6 class="font-bold text-2xl mb-4">Medios de Contacto</h6>
+          <span
+            class="w-max rounded-full bg-white text-black font-bold border-2 px-4 py-[2px] text-base mb-4"
+            >Disponible para trabajar</span
+          >
+          <p class="w-full text-xl text-pretty mb-3">
+            Mi objetivo es poder brindar la mejor experiencia posible hacia los
+            usuarios finales, dando lo mejor de mi en cada nuevo proyecto.
+          </p>
+
+          <p class="w-full text-xl text-pretty mb-4">
+            Teniendo en cuenta todo lo pedido, creando un ambiente laboral
+            ameno, basado en el respeto y la clara comunicación.
+          </p>
+
+          <p class="w-full text-xl text-pretty mb-4">
+            Si desea obtener más información, no dude en rellenar el formulario
+            que se encuentra a su derecha
+          </p>
+
+          <div class="flex gap-5">
+            <IconGitHub class="w-8" />
+
+            <IconLinkedin class="w-8" />
+
+            <IconGmail class="w-8" />
+          </div>
+        </div>
+
+        <div class="w-full h-full flex justify-end">
+          <div class="max-w-full w-[520px] h-full relative z-10 border-2">
+            <form
+              class="bg-black w-full h-full flex gap-4 flex-col p-8 absolute border-2 -top-6 right-6 xl:-top-4 xl:right-4"
+            >
+              <label class="flex flex-col gap-2 text-lg" for="">
+                Nombre
+                <input
+                  placeholder="Ingrese su nombre"
+                  class="p-1 border-b-2 border-white bg-transparent"
+                  type="text"
+                  name=""
+                  id=""
+                />
+              </label>
+
+              <label class="flex flex-col gap-2 text-lg" for="">
+                Apellido
+                <input
+                  placeholder="Ingrese su apellido"
+                  class="p-1 border-b-2 border-white bg-transparent"
+                  type="text"
+                  name=""
+                  id=""
+                />
+              </label>
+
+              <label class="flex flex-col gap-2 text-lg" for="">
+                Mensaje
+                <textarea
+                  placeholder="Coloque un mensaje"
+                  class="p-1 resize-none border-b-2 border-white bg-transparent"
+                  rows="4"
+                  name=""
+                  id=""></textarea>
+              </label>
+
+              <button
+                class="mt-3 max-w-full w-max text-center border-2 py-1 px-6 rounded-sm text-lg font-bold"
+                >Enviar Formulario</button
+              >
+            </form>
+          </div>
+        </div>
       </header>
       <footer class="w-full">
         <TitleSection title="CONTACTO" />
