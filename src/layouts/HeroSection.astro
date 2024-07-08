@@ -2,35 +2,40 @@
 import IconGitHub from "../assets/icons/IconGitHub.astro";
 import IconLinkedin from "../assets/icons/IconLinkedin.astro";
 import IconGmail from "../assets/icons/IconGmail.astro";
-
 import TitleSection from "../components/TitleSection.astro";
 ---
 
 <section
-  class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-10 text-white"
+  class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center px-14 gap-10 text-white"
 >
-  <header class="w-full h-full flex justify-between items-center mt-20">
-    <aside class="flex flex-col gap-6">
-      <a href="/" title="Ir a GitHub"
+  <header class="w-full h-full grid grid-cols-auto-proyects mt-40 gap-20 max-lg:gap-4">
+    <aside class="h-full flex justify-center flex-col gap-6">
+      <a
+        href="https://github.com/SebastianPerez11"
+        target="_blank"
+        title="Ir a GitHub"
         ><IconGitHub class="w-9 hover:-translate-y-1 transition-transform" /></a
       >
-      <a href="/" title="Ir a Linkedin"
+      <a
+        href="https://www.linkedin.com/in/sebastian-perezz"
+        target="_blank"
+        title="Ir a Linkedin"
         ><IconLinkedin
           class="w-9 hover:-translate-y-1 transition-transform"
         /></a
       >
-      <a href="/" title="Ir a Gmail"
+      <a href="/" target="_blank" title="Ir a Gmail"
         ><IconGmail class="w-9 hover:-translate-y-1 transition-transform" /></a
       >
     </aside>
     <div
-      class="2xl:w-[580px] 2xl:h-[340px] relative z-10 border-2 xl:w-[500px] xl:h-[240px]"
+      class="place-self-center w-[580px] 2xl:w-[580px] max-xl:w-[460px] h-full 2xl:h-[340px] max-2xl:h-[300px] relative z-10 border-2"
     >
       <span
         class="bg-black w-full absolute flex justify-center items-center h-full border-2 -top-6 right-6 xl:-top-4 xl:right-4"
       >
         <h1
-          class="2xl:text-[80px] xl:text-7xl z-40 w-[9ch] text-center font-bold leading-none"
+          class="2xl:text-[80px] max-2xl:text-7xl z-40 w-[9ch] text-center font-bold leading-none"
         >
           Sebastian Perez
         </h1>

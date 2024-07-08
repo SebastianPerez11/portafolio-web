@@ -7,8 +7,8 @@ export default {
 				sansation: ['Sansation', 'ui-sans-serif', 'system-ui'],
 			  },
 			  gridTemplateColumns: {
-				'auto-proyects': 'repeat(auto-fit, minmax(460px, 1fr))',
-				'auto-experience': 'repeat(auto-fit, minmax(300px, 1fr))',
+				'auto-proyects': 'repeat(auto-fit, minmax(500px, 1fr))',
+				'auto-experience': 'repeat(auto-fit, minmax(260px, 1fr))',
 			}
 		},
 	},

@@ -1,22 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
-import IconGitHub from "../assets/icons/IconGitHub.astro";
-import IconLinkedin from "../assets/icons/IconLinkedin.astro";
-import IconGmail from "../assets/icons/IconGmail.astro";
-import IconAstro from "../assets/icons/IconAstro.astro";
-import IconTailwind from "../assets/icons/IconTailwind.astro";
-import IconHtml from "../assets/icons/IconHtml.astro";
-import IconCss from "../assets/icons/IconCss.astro";
-import IconJavaScript from "../assets/icons/IconJavaScript.astro";
-import IconFigma from "../assets/icons/IconFigma.astro";
-import IconVercel from "../assets/icons/IconVercel.astro";
-
-import TitleSection from "../components/TitleSection.astro";
-import CardProyect from "../components/CardProyect.astro";
-import Button from "../components/Button.astro";
 
 import HeroSection from "../layouts/HeroSection.astro";
+import AboutSection from "../layouts/AboutSection.astro";
+import ProyectSection from "../layouts/ProyectSection.astro";
+import ExperienceSection from "../layouts/ExperienceSection.astro";
+import ContactSection from "../layouts/ContactSection.astro";
 ---
 
 <Layout title="Sebastian Perez">
@@ -25,280 +15,22 @@ import HeroSection from "../layouts/HeroSection.astro";
     id="inicio"
     class="w-full h-full flex flex-col justify-center items-center"
   >
- 
-    <HeroSection/>
+    <HeroSection />
 
     <span id="sobremi"></span>
 
-    <section
-      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-10 text-white"
-    >
-      <header
-        class="w-full h-full flex justify-between items-center gap-20 mt-20"
-      >
-        <div class="w-full h-full mt-12 flex flex-col justify-center text-xl">
-          <h6 class="font-bold text-2xl mb-3">Un poco sobre mi</h6>
-          <p class="w-full text-pretty mb-3">
-            Soy Sebas, Desarrollador Web Front End y Técnico en Análisis de
-            Sistemas.
-          </p>
-          <p class="w-full text-pretty mb-3">
-            Me destaco en el diseño y desarrollo de paginas webs, creando
-            experiencias amigables para los usuarios.
-          </p>
-          <p class="w-full text-pretty mb-3">
-            Ofrezco webs optimizadas, con un gran rendimiento, en cuanto a
-            velocidad de carga, SEO y estructuración del sitio.
-          </p>
-        </div>
-
-        <div
-          class="w-full h-full flex flex-col justify-center items-center gap-10 mt-12"
-        >
-          <div class="w-full h-[130px] border-2 relative z-10">
-            <span
-              class="bg-black absolute flex justify-center items-center w-full h-full border-2 -top-6 right-6"
-            >
-              <h2 class="text-6xl z-40 text-center font-bold leading-none">
-                Tecnologías
-              </h2>
-            </span>
-          </div>
-
-          <ul class="flex gap-8 justify-center items-center">
-            <IconHtml class="w-10" />
-            <IconCss class="w-10" />
-            <IconJavaScript class="w-10" />
-            <IconAstro class="w-10" />
-            <IconTailwind class="w-10" />
-            <IconFigma class="w-10" />
-            <IconVercel class="w-10" />
-          </ul>
-        </div>
-      </header>
-      <footer class="w-full">
-        <p class="text-2xl text-center text-pretty mb-8 font-medium">
-          HTML5 - CSS3 - JAVASCRIPT - ASTRO - TAILWIND - FIGMA - VERCEL
-        </p>
-        <TitleSection title="SOBRE MI" />
-      </footer>
-    </section>
+    <AboutSection />
 
     <span id="proyectos"></span>
 
-    <section
-      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-10 text-white"
-    >
-      <header
-        class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20"
-      >
-        <CardProyect
-          title="WEB DAFA SEGUROS"
-          description="Página web informativa para una empresa Productora Asesora de Seguros en Argentina. Se utilizo la API View Transition. (En Producción)"
-        >
-          <slot slot="icons">
-            <IconAstro class="w-8" />
-            <IconTailwind class="w-8" />
-          </slot>
-          <slot slot="buttons">
-            <Button text="Ver sitio" href="./" />
-            <Button text="Ver repositorio" href="./" />
-          </slot>
-        </CardProyect>
-
-        <CardProyect
-          title="LANDING TESLA"
-          description="Se desarrollo una landing page teniendo de referencia la página original de Tesla (Proyecto realizado para el programa Codo a Codo)."
-        >
-          <slot slot="icons">
-            <IconAstro class="w-8" />
-            <IconTailwind class="w-8" />
-          </slot>
-          <slot slot="buttons">
-            <Button text="Ver sitio" href="./" />
-            <Button text="Ver repositorio" href="./" />
-          </slot>
-        </CardProyect>
-
-        <CardProyect
-          title="LANDING MISIÓN SALTA"
-          description="Web de la ONG - Misión Salta brinda principalmente información sobre el propósito, objetivo, entre más puntos importantes de la misión."
-        >
-          <slot slot="icons">
-            <IconAstro class="w-8" />
-            <IconTailwind class="w-8" />
-          </slot>
-          <slot slot="buttons">
-            <Button text="Ver sitio" href="./" />
-            <Button text="Ver repositorio" href="./" />
-          </slot>
-        </CardProyect>
-
-        <CardProyect
-          title="PROXIMAMENTE..."
-          description="Página web informativa para una empresa Productora Asesora de Seguros en Argentina. (En Producción)"
-        >
-          <slot slot="icons">
-            <IconAstro class="w-8" />
-            <IconTailwind class="w-8" />
-          </slot>
-          <slot slot="buttons">
-            <Button text="Ver sitio" href="./" />
-            <Button text="Ver repositorio" href="./" />
-          </slot>
-        </CardProyect>
-      </header>
-      <footer class="w-full">
-        <TitleSection title="PROYECTOS" />
-      </footer>
-    </section>
+    <ProyectSection />
 
     <span id="experiencia"></span>
 
-    <section
-      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
-    >
-      <header
-        class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20"
-      >
-        <div class="w-full">
-          <time class="text-lg">04-08-2023</time>
-          <h4 class="text-2xl font-bold mb-3">
-            Proyecto Landing Page Misión Salta
-          </h4>
-          <p class="w-full text-xl text-pretty mb-2">
-            El objetivo de la creacion de la landing page fue poder lograr
-            unificar la informacion, dar a conocer con claridad que es "Mision
-            Salta".
-          </p>
-          <p class="w-full text-xl text-pretty">
-            Cuales son sus objetivos, quienes pueden colaborar en esta causa y a
-            su vez plasmar las principales actividades que se realizan en dicha
-            misión.
-          </p>
-
-          <div class="w-full mt-3">
-            <h4 class="text-2xl font-bold mb-3">Pasos del proyecto</h4>
-            <div class="w-full grid grid-cols-auto-experience text-xl gap-2">
-              <span>1) Recopilación de información.</span>
-              <span>2) Benchmarking.</span>
-              <span>3) Arquitectura de la información.</span>
-              <span>4) Wireframes en baja fidelidad.</span>
-              <span>5) Creación de Guía de Estilos.</span>
-              <span>6) Wireframes en alta fidelidad.</span>
-              <span>7) Creación de repositorio.</span>
-              <span>8) Desarrollo.</span>
-              <span>9) Testeo.</span>
-              <span>10) Despliegue.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-full">
-          <picture class="w-full">
-            <img class="rounded-md" src="/src/assets/img/2.jpg" alt="" />
-            <p class="mt-3 text-lg text-pretty">
-              Ilustraciones de las diferentes partes de la UI, recopiladas de
-              las distintas etapas del proyecto en Figma.
-            </p>
-          </picture>
-          <footer class="mt-5 flex gap-3">
-            <Button class="w-full" text="Más Información" href="/" />
-            <Button class="w-full" text="Ver Proyecto" href="/" />
-          </footer>
-        </div>
-      </header>
-      <footer class="w-full">
-        <TitleSection title="EXPERIENCIA" />
-      </footer>
-    </section>
+    <ExperienceSection />
 
     <span id="contacto"></span>
 
-    <section
-      class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
-    >
-      <header
-        class="w-full h-full flex justify-between items-center gap-20 mt-20"
-      >
-        <div class="w-full flex flex-col">
-          <h6 class="font-bold text-2xl mb-4">Medios de Contacto</h6>
-          <span
-            class="w-max rounded-full bg-white text-black font-bold border-2 px-4 py-[2px] text-base mb-4"
-            >Disponible para trabajar</span
-          >
-          <p class="w-full text-xl text-pretty mb-3">
-            Mi objetivo es poder brindar la mejor experiencia posible hacia los
-            usuarios finales, dando lo mejor de mi en cada nuevo proyecto.
-          </p>
-
-          <p class="w-full text-xl text-pretty mb-4">
-            Teniendo en cuenta todo lo pedido, creando un ambiente laboral
-            ameno, basado en el respeto y la clara comunicación.
-          </p>
-
-          <p class="w-full text-xl text-pretty mb-4">
-            Si desea obtener más información, no dude en rellenar el formulario
-            que se encuentra a su derecha
-          </p>
-
-          <div class="flex gap-5">
-            <IconGitHub class="w-8" />
-
-            <IconLinkedin class="w-8" />
-
-            <IconGmail class="w-8" />
-          </div>
-        </div>
-
-        <div class="w-full h-full flex justify-end">
-          <div class="max-w-full w-[520px] h-full relative z-10 border-2">
-            <form
-              class="bg-black w-full h-full flex gap-4 flex-col p-8 absolute border-2 -top-6 right-6 xl:-top-4 xl:right-4"
-            >
-              <label class="flex flex-col gap-2 text-lg" for="">
-                Nombre
-                <input
-                  placeholder="Ingrese su nombre"
-                  class="p-1 border-b-2 border-white bg-transparent"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </label>
-
-              <label class="flex flex-col gap-2 text-lg" for="">
-                Apellido
-                <input
-                  placeholder="Ingrese su apellido"
-                  class="p-1 border-b-2 border-white bg-transparent"
-                  type="text"
-                  name=""
-                  id=""
-                />
-              </label>
-
-              <label class="flex flex-col gap-2 text-lg" for="">
-                Mensaje
-                <textarea
-                  placeholder="Coloque un mensaje"
-                  class="p-1 resize-none border-b-2 border-white bg-transparent"
-                  rows="4"
-                  name=""
-                  id=""></textarea>
-              </label>
-
-              <button
-                class="mt-3 max-w-full w-max text-center border-2 py-1 px-6 rounded-sm text-lg font-bold"
-                >Enviar Formulario</button
-              >
-            </form>
-          </div>
-        </div>
-      </header>
-      <footer class="w-full">
-        <TitleSection title="CONTACTO" />
-      </footer>
-    </section>
+    <ContactSection />
   </main>
 </Layout>

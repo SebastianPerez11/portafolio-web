@@ -1,0 +1,109 @@
+---
+import IconGitHub from "../assets/icons/IconGitHub.astro";
+import IconLinkedin from "../assets/icons/IconLinkedin.astro";
+import IconGmail from "../assets/icons/IconGmail.astro";
+
+import TitleSection from "../components/TitleSection.astro";
+import Paragraph from "../components/Paragraph.astro";
+---
+
+<section
+  class="w-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center mt-14 py-14 px-14 gap-20 text-white"
+>
+  <header
+    class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20 2xl:gap-20 max-xl:gap-16 max-lg:gap-14"
+  >
+    <div class="w-full flex flex-col">
+      <h6 class="font-bold text-2xl mb-4">Medios de Contacto</h6>
+      <span
+        class="w-max rounded-full bg-white/95 text-black font-bold border-2 px-4 py-[2px] text-base mb-4"
+        >Disponible para trabajar</span
+      >
+      <Paragraph
+        content="Mi objetivo es poder brindar la mejor experiencia posible hacia los usuarios finales, dando lo mejor de mi en cada nuevo proyecto."
+      />
+
+      <Paragraph
+        content="Teniendo en cuenta todo lo pedido, creando un ambiente laboral ameno, basado en el respeto y la clara comunicación."
+      />
+
+      <Paragraph
+        content=" Si desea obtener más información, no dude en rellenar el formulario que se encuentra a su derecha"
+      />
+
+      <div class="flex gap-5">
+        <a
+          href="https://github.com/SebastianPerez11"
+          target="_blank"
+          title="Ir a GitHub"
+          ><IconGitHub
+            class="w-8 hover:-translate-y-1 transition-transform"
+          /></a
+        >
+        <a
+          href="https://www.linkedin.com/in/sebastian-perezz"
+          target="_blank"
+          title="Ir a Linkedin"
+          ><IconLinkedin
+            class="w-8 hover:-translate-y-1 transition-transform"
+          /></a
+        >
+        <a href="/" target="_blank" title="Ir a Gmail"
+          ><IconGmail
+            class="w-8 hover:-translate-y-1 transition-transform"
+          /></a
+        >
+      </div>
+    </div>
+
+    <div class="w-full h-[480px] flex justify-end">
+      <div
+        class="2xl:w-[520px] xl:w-[500px] lg:w-full w-full h-full relative z-10 border-2"
+      >
+        <form
+          class="bg-black w-full h-full flex gap-4 flex-col p-8 absolute border-2 -top-6 right-6 xl:-top-4 xl:right-4"
+        >
+          <label class="flex flex-col gap-2 text-lg" for="">
+            Nombre
+            <input
+              placeholder="Ingrese su nombre"
+              class="p-1 border-b-2 border-white bg-transparent"
+              type="text"
+              name=""
+              id=""
+            />
+          </label>
+
+          <label class="flex flex-col gap-2 text-lg" for="">
+            Apellido
+            <input
+              placeholder="Ingrese su apellido"
+              class="p-1 border-b-2 border-white bg-transparent"
+              type="text"
+              name=""
+              id=""
+            />
+          </label>
+
+          <label class="flex flex-col gap-2 text-lg" for="">
+            Mensaje
+            <textarea
+              placeholder="Coloque un mensaje"
+              class="p-1 resize-none border-b-2 border-white bg-transparent"
+              rows="4"
+              name=""
+              id=""></textarea>
+          </label>
+
+          <button
+            class="mt-3 max-w-full w-max text-center border-2 py-1 px-6 rounded-sm text-lg font-bold"
+            >Enviar Formulario</button
+          >
+        </form>
+      </div>
+    </div>
+  </header>
+  <footer class="w-full">
+    <TitleSection title="CONTACTO" />
+  </footer>
+</section>

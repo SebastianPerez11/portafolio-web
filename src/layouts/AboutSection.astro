@@ -1,0 +1,62 @@
+---
+import IconHtml from "../assets/icons/IconHtml.astro";
+import IconCss from "../assets/icons/IconCss.astro";
+import IconJavaScript from "../assets/icons/IconJavaScript.astro";
+import IconFigma from "../assets/icons/IconFigma.astro";
+import IconVercel from "../assets/icons/IconVercel.astro";
+import IconAstro from "../assets/icons/IconAstro.astro";
+import IconTailwind from "../assets/icons/IconTailwind.astro";
+
+import TitleSection from "../components/TitleSection.astro";
+import Paragraph from "../components/Paragraph.astro";
+---
+
+<section
+  class="w-full max-h-full h-[900px] max-w-[1440px] flex flex-col items-center justify-center px-14 gap-10 text-white"
+>
+  <header class="w-full h-full grid grid-cols-auto-proyects place-items-center mt-20 gap-20 2xl:gap-20 max-xl:gap-10 max-lg:gap-0">
+    <div class="w-full h-full mt-12 flex flex-col justify-center">
+      <h6 class="font-bold text-2xl mb-3">Un poco sobre mi</h6>
+      <Paragraph
+        content="Soy Sebas, Desarrollado Web Front End y Técnico en Análisis de Sistemas."
+      />
+      <Paragraph
+        content="Me destaco en el diseño y desarrollo de paginas webs, creando  experiencias amigables para los usuarios."
+      />
+
+      <Paragraph
+        content="Ofrezco webs optimizadas, con un gran rendimiento, en cuanto a velocidad de carga, SEO y estructuración del sitio."
+      />
+    </div>
+
+    <div
+      class="w-full h-full flex flex-col justify-center items-center gap-10 mt-12"
+    >
+      <div class="w-full h-[130px] border-2 relative z-10">
+        <span
+          class="bg-black absolute flex justify-center items-center w-full h-full border-2 -top-6 right-6"
+        >
+          <h2 class="text-6xl max-2xl:text-6xl max-xl:text-5xl  z-40 text-center font-bold leading-none">
+            Tecnologías
+          </h2>
+        </span>
+      </div>
+
+      <ul class="flex gap-8 2xl:gap-8 max-xl:gap-4 justify-center items-center">
+        <IconHtml class="w-10" />
+        <IconCss class="w-10" />
+        <IconJavaScript class="w-10" />
+        <IconAstro class="w-10" />
+        <IconTailwind class="w-10" />
+        <IconFigma class="w-10" />
+        <IconVercel class="w-10" />
+      </ul>
+    </div>
+  </header>
+  <footer class="w-full">
+    <p class="text-2xl text-center text-pretty mb-8 font-medium">
+      HTML5 - CSS3 - JAVASCRIPT - ASTRO - TAILWIND - FIGMA - VERCEL
+    </p>
+    <TitleSection title="SOBRE MI" />
+  </footer>
+</section>
