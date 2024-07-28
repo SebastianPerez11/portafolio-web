@@ -1,14 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			fontFamily: {
 				sansation: ['Sansation', 'ui-sans-serif', 'system-ui'],
 			  },
 			  gridTemplateColumns: {
-				'auto-proyects': 'repeat(auto-fit, minmax(500px, 1fr))',
-				'auto-experience': 'repeat(auto-fit, minmax(260px, 1fr))',
+				'auto-red': 'repeat(auto-fit, minmax(200px, 1fr))',
+				'auto-tecnology': 'repeat(auto-fit, minmax(60px, 1fr))',
 			}
 		},
 	},
