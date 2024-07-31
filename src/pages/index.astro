@@ -1,36 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import NavBar from "../components/NavBar.astro";
-
-import HeroSection from "../layouts/HeroSection.astro";
-import AboutSection from "../layouts/AboutSection.astro";
-import ProyectSection from "../layouts/ProyectSection.astro";
-import ExperienceSection from "../layouts/ExperienceSection.astro";
-import ContactSection from "../layouts/ContactSection.astro";
+import HeroSection from "../layouts/Grid.astro";
+import Grid from "../layouts/Grid.astro";
 ---
 
 <Layout title="Portafolio - Sebastian Perez">
- 
   <main
     id="inicio"
     class="w-full h-full flex flex-col justify-center items-center"
   >
-    <HeroSection />
-
-    <!-- <span id="sobremi"></span>
-
-    <AboutSection />
-
-    <span id="proyectos"></span>
-
-    <ProyectSection />
-
-    <span id="experiencia"></span>
-
-    <ExperienceSection />
-
-    <span id="contacto"></span>
-
-    <ContactSection /> -->
+    <Grid />
   </main>
 </Layout>

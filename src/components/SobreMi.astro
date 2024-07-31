@@ -1,0 +1,43 @@
+---
+import IconArrow2 from "../assets/icons/IconArrow2.astro";
+
+const { pill, title, paragraph, href, textLink, textColor } = Astro.props;
+---
+
+<section
+    transition:name="aboutme"
+    class=`nameSection border-l-green-200 border-l-4 rounded-lg border border-zinc-700 bg-zinc-700 p-6 col-span-12 row-span-2 ${Astro.props.classContainer} bg-opacity-50 transition-transform`
+>
+    <span
+        class="block mb-5 w-max rounded-full bg-green-200 text-black font-bold px-3 py-[2px] text-base"
+        >{pill}</span
+    >
+    <h1 class="text-[22.5px] mb-2">{title}</h1>
+    <p class="text-zinc-400 text-[22px] mb-1">
+        <span class="text-green-100"> {textColor}</span>
+        {paragraph}
+        <slot name="moreText">
+
+        </slot>
+    </p>
+    <a class="moreLink flex w-max items-center text-lg mt-6" href={href}
+        >{textLink} <IconArrow2 class="w-4" /></a
+    >
+</section>
+
+<script data-astro-rerun is:inline type="module">
+    const nameSection = document.querySelector(".nameSection");
+    const moreLink = document.querySelector(".moreLink");
+
+    moreLink.addEventListener("mouseover", () => {
+        nameSection.classList.remove("bg-zinc-700");
+        nameSection.classList.add("bg-green-100/20");
+        nameSection.classList.add("scale-[1.02]");
+    });
+
+    moreLink.addEventListener("mouseout", () => {
+        nameSection.classList.remove("bg-green-100/20");
+        nameSection.classList.remove("scale-[1.02]");
+        nameSection.classList.add("bg-zinc-700");
+    });
+</script>
