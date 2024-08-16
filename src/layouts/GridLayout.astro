@@ -1,0 +1,89 @@
+---
+import AboutMe from "./AboutMe.astro";
+import ContactMe from "./ContactMe.astro";
+import Description from "./Description.astro";
+import CardProyect from "../components/CardProyect.astro";
+import Tecnology from "./Tecnology.astro";
+import ButtonTheme from "../components/ButtonTheme.astro";
+import CardMore from "../components/CardMore.astro";
+import Age from "./Age.astro";
+
+import ButtonPrimary from "../components/ButtonPrimary.astro";
+---
+
+<main
+  id="inicio"
+  class="w-full h-full flex flex-col justify-center items-center"
+>
+  <section
+    class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
+  >
+    <header class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
+      <AboutMe
+        classContainer="md:col-span-6"
+        pill="Disponible para trabajar"
+        title="Hola, soy Sebastian Perez"
+        textColor="Desarrollador Front End"
+        paragraph="y Tecnico Analista en Sistemas."
+      >
+        <slot slot="buttonPrimary">
+          <ButtonPrimary
+            textLink="Conocer más"
+            href="SobreMi"
+            title="Conocer más sobre mi"
+            classLink=" moreLink hover:text-green-200 dark:hover:text-green-600"
+            classIcon="group-hover:fill-green-200 dark:group-hover:fill-green-600 "
+          />
+        </slot>
+      </AboutMe>
+
+      <ContactMe classContainer="col-span-6" />
+
+      <Description />
+
+      <CardProyect>
+        <slot slot="buttonPrimary">
+          <ButtonPrimary
+            target="_blank"
+            textLink="Ver sitio"
+            href="https://dafasesoresdeseguros.com.ar/"
+            title="Ver sitio"
+            classLink="linkHover hover:text-blue-200 dark:hover:text-blue-800"
+            classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
+          />
+          <ButtonPrimary
+            target="_blank"
+            textLink="Ver repositorio"
+            href="https://github.com/SebastianPerez11/df-seguros-web"
+            title="Ver repositorio"
+            classLink="linkHover hover:text-blue-200 dark:hover:text-blue-800"
+            classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
+          /></slot
+        >
+      </CardProyect>
+
+      <Tecnology />
+
+      <ButtonTheme />
+
+      <CardMore
+        class="border-l-red-200 border-l-4 hover:bg-red-200/20 dark:hover:bg-red-200/20 dark:border-l-red-500"
+        text="Conocer más"
+        textColor="Proyectos"
+        colorText="text-red-200 dark:text-red-600"
+        href="/"
+        title="Conocer más proyectos"
+      />
+      <CardMore
+        class="border-r-cyan-200 border-r-4 hover:bg-cyan-200/20 dark:hover:bg-cyan-200/20 dark:border-r-cyan-500"
+        text="Experiencia como"
+        textColor="Freelancer"
+        colorText="text-cyan-200 dark:text-cyan-500"
+        href="/"
+        title="Conocer mi experiencia"
+      />
+
+      <Age />
+    </header>
+  </section>
+</main>

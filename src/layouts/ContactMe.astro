@@ -1,0 +1,53 @@
+---
+import IconMail from "../assets/icons/IconMail.astro";
+import IconGitHub from "../assets/icons/IconGitHub.astro";
+import IconLinkedin from "../assets/icons/IconLinkedin.astro";
+import IconInstagram from "../assets/icons/IconInstagram.astro";
+
+import IconContact from "../components/IconContact.astro";
+---
+
+<section
+  class=`w-full grid grid-cols-auto-red gap-4 row-span-2 ${Astro.props.classContainer}`
+>
+  <IconContact
+    title="Ir a GitHub"
+    classLink="dark:hover:bg-violet-300/20 hover:bg-violet-300/20"
+    transitionName="iconGitHub"
+    href="https://github.com/SebastianPerez11"
+  >
+    <slot slot="icon">
+      <IconGitHub class="w-10 fill-white dark:fill-black/80" />
+    </slot>
+  </IconContact>
+  <IconContact
+    title="Ir a Linkedin"
+    classLink="dark:hover:bg-blue-300/30  hover:bg-blue-300/20"
+    transitionName="iconLinkedin"
+    href="https://www.linkedin.com/in/sebastian-perezz/"
+  >
+    <slot slot="icon">
+      <IconLinkedin class="w-9 fill-white dark:fill-black/80" />
+    </slot>
+  </IconContact>
+  <IconContact
+    title="Ir a tu Correo"
+    classLink="dark:hover:bg-red-300/40  hover:bg-red-300/20"
+    transitionName="iconMail"
+    href="mailto:sebasperez.dev@gmail.com?subject=The%20subject%20of%20the%20mai"
+  >
+    <slot slot="icon">
+      <IconMail class="w-11 fill-white dark:fill-black/80" />
+    </slot>
+  </IconContact>
+  <IconContact
+    title="Ir a Instagram"
+    classLink="dark:hover:bg-pink-300/40 hover:bg-pink-300/20"
+    transitionName="iconInstagram"
+    href="/"
+  >
+    <slot slot="icon">
+      <IconInstagram class="w-9 fill-white dark:fill-black/80" />
+    </slot>
+  </IconContact>
+</section>

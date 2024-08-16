@@ -1,0 +1,14 @@
+---
+import IconArrow from "../assets/icons/IconArrow.astro";
+const {href, textLink, title, target} = Astro.props;
+---
+<a
+    class=`transition-colors group flex w-max items-center text-lg mt-6 dark:text-black ${Astro.props.classLink}`
+    title={title}
+    href={href}
+    target={target}
+    >{textLink}
+    <IconArrow
+        class=`w-4 fill-white dark:fill-black ${Astro.props.classIcon}`
+    /></a
+>
