@@ -4,7 +4,7 @@
 
 <button
     title="Cambiar Tema"
-    onclick="(() => document.body.classList.toggle('dark'))()"
+    id="theme-toggle"
     class="w-full flex justify-center items-center flex-col col-span-2 row-span-2 rounded-lg border border-zinc-700 p-6 hover:bg-violet-200/20 dark:hover:bg-yellow-200/20 hover:scale-105 transition-all bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md"
 >
     <svg
@@ -27,3 +27,12 @@
             clip-rule="evenodd"></path>
     </svg>
 </button>
+<script data-astro-rerun is:inline type="module">
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const currentTheme = localStorage.getItem("theme") || "light";
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+
+        localStorage.setItem("theme", newTheme);
+        document.documentElement.classList.toggle("dark", newTheme === "dark");
+    });
+</script>

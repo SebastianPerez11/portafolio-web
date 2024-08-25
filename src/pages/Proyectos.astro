@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardProyect from "../components/CardProyect.astro";
+import ButtonPrimary from "../components/ButtonPrimary.astro";
+import Description from "../layouts/Description.astro";
+---
+
+<Layout title="Todos los Proyectos">
+    <main
+        id="inicio"
+        class="w-full h-full flex flex-col justify-center items-center"
+    >
+        <section
+            class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
+        >
+            <header
+                class="mx-auto grid max-w-6xl grid-flow-dense grid-cols-12 gap-4"
+            >
+                <div class="grid grid-cols-auto-proyects gap-4 col-span-12">
+                    <CardProyect
+                        transitionName="firstCard"
+                        classColor="bg-blue-200 dark:bg-blue-300"
+                        classCard="border-l-blue-200 dark:border-l-blue-500"
+                        classTitle="text-blue-200 dark:text-blue-800"
+                        pill="Ultimo proyecto"
+                        proyectTitle="Web - Dafa Seguros"
+                        description="Desarrollo de página web informativa para una empresa Productora Asesora de Seguros."
+                    >
+                        <slot slot="buttonPrimary">
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver sitio"
+                                href="https://dafasesoresdeseguros.com.ar/"
+                                title="Ver sitio"
+                                classLink="linkHover hover:text-blue-200 dark:hover:text-blue-800"
+                                classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
+                            />
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver repositorio"
+                                href="https://github.com/SebastianPerez11/df-seguros-web"
+                                title="Ver repositorio"
+                                classLink="linkHover hover:text-blue-200 dark:hover:text-blue-800"
+                                classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
+                            /></slot
+                        >
+                    </CardProyect>
+
+                    <CardProyect
+                        classColor="bg-yellow-100 dark:bg-yellow-300"
+                        classCard="border-l-yellow-200 dark:border-l-yellow-400"
+                        classTitle="text-yellow-50 dark:text-yellow-600"
+                        pill="Colaborativo"
+                        proyectTitle="Landing Page - Misión Salta"
+                        description="Se desarrollo una landing page informativa para una ONG del Instituto Cristo Obrero."
+                    >
+                        <slot slot="buttonPrimary">
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver sitio"
+                                href="https://mision-salta-landing-dev.vercel.app/"
+                                title="Ver sitio"
+                                classLink="linkHover hover:text-yellow-200 dark:hover:text-yellow-800"
+                                classIcon="group-hover:fill-yellow-200 dark:fill-zinc-800 dark:group-hover:fill-yellow-800"
+                            />
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver repositorio"
+                                href="https://github.com/leoromero97/mision-salta-landing"
+                                title="Ver repositorio"
+                                classLink="linkHover hover:text-yellow-200 dark:hover:text-yellow-800"
+                                classIcon="group-hover:fill-yellow-200 dark:fill-zinc-800 dark:group-hover:fill-yellow-800"
+                            /></slot
+                        >
+                    </CardProyect>
+
+                    <CardProyect
+                        classColor="bg-red-200 dark:bg-red-300"
+                        classCard="border-l-red-200 dark:border-l-red-500"
+                        classTitle="text-red-200 dark:text-red-700"
+                        pill="Individual"
+                        proyectTitle="Landing Page - Tesla"
+                        description="Recreacion de la UI del sitio web de Tesla, junto a unos pequeños cambios en el diseño."
+                    >
+                        <slot slot="buttonPrimary">
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver sitio"
+                                href="https://landing-tesla-cac.vercel.app/"
+                                title="Ver sitio"
+                                classLink="linkHover hover:text-red-200 dark:hover:text-red-800"
+                                classIcon="group-hover:fill-red-200 dark:fill-zinc-800 dark:group-hover:fill-red-800"
+                            />
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver repositorio"
+                                href="https://github.com/SebastianPerez11/landing-tesla-cac"
+                                title="Ver repositorio"
+                                classLink="linkHover hover:text-red-200 dark:hover:text-red-800"
+                                classIcon="group-hover:fill-red-200 dark:fill-zinc-800 dark:group-hover:fill-red-800"
+                            /></slot
+                        >
+                    </CardProyect>
+
+                    <CardProyect
+                        classColor="bg-gray-200 dark:bg-gray-300"
+                        classCard="border-l-gray-200 dark:border-l-gray-500"
+                        classTitle="text-gray-200 dark:text-gray-800"
+                        pill="Individual"
+                        proyectTitle="Landing Page - LZC"
+                        description="Desarrollo de landing page informativa para una empresa Constructora en Argentina."
+                    >
+                        <slot slot="buttonPrimary">
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver sitio"
+                                href="https://dafasesoresdeseguros.com.ar/"
+                                title="Ver sitio"
+                                classLink="linkHover hover:text-blue-200 dark:hover:text-blue-800"
+                                classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
+                            />
+                            <ButtonPrimary
+                                target="_blank"
+                                textLink="Ver repositorio"
+                                href="https://github.com/SebastianPerez11/df-seguros-web"
+                                title="Ver repositorio"
+                                classLink="linkHover hover:text-blue-200 dark:hover:text-blue-800"
+                                classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
+                            /></slot
+                        >
+                    </CardProyect>
+                </div>
+
+                <Description classCard="col-span-12 row-span-2 md:col-span-8 ">
+                    <ButtonPrimary
+                        textLink="Volver al Inicio"
+                        href="./"
+                        title="Volver al inicio"
+                        classLink=" moreLink hover:text-green-200 dark:hover:text-green-600"
+                        classIcon="group-hover:fill-green-200 dark:group-hover:fill-green-600 "
+                    />
+                </Description>
+
+                <section
+                    class="dark:shadow-md col-span-2 row-span-2 md:col-span-4 rounded-lg border border-zinc-700 dark:bg-white dark:bg-opacity-30 dark:border-black/10 bg-zinc-700 bg-opacity-50"
+                >
+                    <img
+                        class="h-full rounded-lg object-cover"
+                        src="/public/img/landing-page-dafa.jpg"
+                        alt=""
+                    />
+                </section>
+            </header>
+        </section>
+    </main>
+</Layout>

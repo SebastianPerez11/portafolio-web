@@ -35,11 +35,14 @@ const { title } = Astro.props;
     >
     </div>
     <slot />
+    <script data-astro-rerun is:inline type="module">
+      (function () {
+        const storedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.classList.toggle(
+          "dark",
+          storedTheme === "dark",
+        );
+      })();
+    </script>
   </body>
 </html>
-
-<!-- <style is:global>
-  html {
-    color-scheme: dark light;
-  }
-</style> -->

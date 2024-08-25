@@ -39,9 +39,17 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
 
       <ContactMe classContainer="col-span-6" />
 
-      <Description />
+      <Description classCard="col-span-12 row-span-2 md:col-span-12 "/>
 
-      <CardProyect>
+      <CardProyect
+        transitionName="firstCard"
+        classColor="bg-blue-200 dark:bg-blue-300"
+        classCard="border-l-blue-200 dark:border-l-blue-500 md:col-span-7 col-span-12 "
+        classTitle="text-blue-200 dark:text-blue-800"
+        pill="Ultimo proyecto"
+        proyectTitle="Web - Dafa Seguros"
+        description="Desarrollo de página web informativa para una empresa Productora Asesora de Seguros."
+      >
         <slot slot="buttonPrimary">
           <ButtonPrimary
             target="_blank"
@@ -71,7 +79,7 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
         text="Conocer más"
         textColor="Proyectos"
         colorText="text-red-200 dark:text-red-600"
-        href="/"
+        href="/Proyectos"
         title="Conocer más proyectos"
       />
       <CardMore

@@ -10,13 +10,15 @@ const { pill, title, paragraph, textColor } = Astro.props;
         class="block mb-5 w-max rounded-full dark:bg-green-300 bg-green-200 text-black font-bold px-3 py-[2px] text-base"
         >{pill}</span
     >
-    <h1 class="text-[22.5px] dark:text-black text-white mb-2">{title}</h1>
+    <h1 class="text-[22.5px] font-bold dark:text-black text-white mb-2">
+        {title}
+    </h1>
     <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
         <span class="text-green-100 dark:text-green-500"> {textColor}</span>
         {paragraph}
         <slot name="moreText" />
     </p>
-    <slot name="buttonPrimary"/>
+    <slot name="buttonPrimary" />
 </section>
 
 <script data-astro-rerun is:inline type="module">

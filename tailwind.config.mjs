@@ -10,6 +10,7 @@ export default {
 			  gridTemplateColumns: {
 				'auto-red': 'repeat(auto-fit, minmax(200px, 1fr))',
 				'auto-tecnology': 'repeat(auto-fit, minmax(60px, 1fr))',
+				'auto-proyects': 'repeat(auto-fit, minmax(400px, 1fr))',
 			}
 		},
 	},
