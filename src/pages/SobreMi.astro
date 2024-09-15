@@ -1,57 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AboutMe from "../layouts/AboutMe.astro";
-import ContactMe from "../layouts/ContactMe.astro";
+import AboutCard from "../components/AboutCard.astro";
+import ContactMeGroup from "../components/ContactMeGroup.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
 ---
 
 <Layout title="Acerca de Mi">
-    <main
-        id="inicio"
-        class="w-full h-full flex flex-col justify-center items-center"
+  <main
+    id="inicio"
+    class="w-full h-full flex flex-col justify-center items-center"
+  >
+    <section
+      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
     >
-        <section
-            class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
+      <header class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
+        <AboutCard
+          classContainer="md:col-span-12"
+          pill="Un poco sobre mi"
+          title=" Desarrollador Web - Front End"
+          paragraph="Como mencione anteriormente mi nombre es Sebastian, soy Argentino y me encuentro en continua evolucion tanto en lo personal como en lo profesional."
+          textLink="Volver al inicio"
+          href="./"
         >
-            <header
-                class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
-            >
-                <AboutMe
-                    classContainer="md:col-span-12"
-                    pill="Un poco sobre mi"
-                    title=" Desarrollador Web - Front End"
-                    paragraph="Como mencione anteriormente mi nombre es Sebastian, soy Argentino y me encuentro en continua evolucion tanto en lo personal como en lo profesional."
-                    textLink="Volver al inicio"
-                    href="./"
-                >
-                    <slot slot="moreText">
-                        <p class="text-zinc-400 dark:text-zinc-700  text-[22px] mb-1">
-                            Principalmente me dedico a desarrollar paginas webs
-                            como freelancer e intento capacitarme
-                            constantemente, en todo lo relacionado a lo que es
-                            diseño y desarrollo web.
-                        </p>
-                        <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
-                            Mi objetivo es poder aportar valor y brindar mis
-                            conocimientos, dentro de una organizacion, ya sea
-                            participando de algun proyecto o seguir
-                            capacitandome, ya que estoy dispuesto a aprender
-                            nuevas tecnologias.
-                        </p>
-                    </slot>
-                    <slot slot="buttonPrimary">
-                        <ButtonPrimary
-                            textLink="Volver al Inicio"
-                            href="./"
-                            title="Volver al inicio"
-                            classLink=" moreLink hover:text-green-200 dark:hover:text-green-600"
-                            classIcon="group-hover:fill-green-200 dark:group-hover:fill-green-600 "
-                        />
-                    </slot>
-                </AboutMe>
+          <slot slot="moreText">
+            <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
+              Principalmente me dedico a desarrollar paginas webs como
+              freelancer e intento capacitarme constantemente, en todo lo
+              relacionado a lo que es diseño y desarrollo web.
+            </p>
+            <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
+              Mi objetivo es poder aportar valor y brindar mis conocimientos,
+              dentro de una organizacion, ya sea participando de algun proyecto
+              o seguir capacitandome, ya que estoy dispuesto a aprender nuevas
+              tecnologias.
+            </p>
+          </slot>
+          <slot slot="buttonPrimary">
+            <ButtonPrimary
+              textLink="Volver al Inicio"
+              href="./"
+              title="Volver al inicio"
+              classLink=" moreLink hover:text-green-200 dark:hover:text-green-600"
+              classIcon="group-hover:fill-green-200 dark:group-hover:fill-green-600 "
+            />
+          </slot>
+        </AboutCard>
 
-                <ContactMe classContainer="col-span-12" />
-            </header>
-        </section>
-    </main>
+        <ContactMeGroup classContainer="col-span-12" />
+      </header>
+    </section>
+  </main>
 </Layout>

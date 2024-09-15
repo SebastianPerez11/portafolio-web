@@ -40,7 +40,7 @@ const { title } = Astro.props;
         const storedTheme = localStorage.getItem("theme") || "light";
         document.documentElement.classList.toggle(
           "dark",
-          storedTheme === "dark",
+          storedTheme === "dark"
         );
       })();
     </script>

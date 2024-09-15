@@ -1,14 +1,13 @@
 ---
-import AboutMe from "./AboutMe.astro";
-import ContactMe from "./ContactMe.astro";
-import Description from "./Description.astro";
-import CardProyect from "../components/CardProyect.astro";
-import Tecnology from "./Tecnology.astro";
+import ContactMeGroup from "../components/ContactMeGroup.astro";
+import DescriptionCard from "../components/DescriptionCard.astro";
+import CardProyect from "../components/ProyectCard.astro";
+import TecnologyCard from "../components/TecnologyCard.astro";
 import ButtonTheme from "../components/ButtonTheme.astro";
-import CardMore from "../components/CardMore.astro";
-import Age from "./Age.astro";
-
+import MoreCard from "../components/MoreCard.astro";
+import AgeCard from "../components/AgeCard.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
+import AboutCard from "../components/AboutCard.astro";
 ---
 
 <main
@@ -19,7 +18,7 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
     class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
   >
     <header class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
-      <AboutMe
+      <AboutCard
         classContainer="md:col-span-6"
         pill="Disponible para trabajar"
         title="Hola, soy Sebastian Perez"
@@ -35,11 +34,11 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
             classIcon="group-hover:fill-green-200 dark:group-hover:fill-green-600 "
           />
         </slot>
-      </AboutMe>
+      </AboutCard>
 
-      <ContactMe classContainer="col-span-6" />
+      <ContactMeGroup classContainer="col-span-6" />
 
-      <Description classCard="col-span-12 row-span-2 md:col-span-12 "/>
+      <DescriptionCard classCard="col-span-12 row-span-2 md:col-span-12 " />
 
       <CardProyect
         transitionName="firstCard"
@@ -70,11 +69,11 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
         >
       </CardProyect>
 
-      <Tecnology />
+      <TecnologyCard classCard="col-span-5 row-span-2 " />
 
       <ButtonTheme />
 
-      <CardMore
+      <MoreCard
         class="border-l-red-200 border-l-4 hover:bg-red-200/20 dark:hover:bg-red-200/20 dark:border-l-red-500"
         text="Conocer más"
         textColor="Proyectos"
@@ -82,16 +81,16 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
         href="/Proyectos"
         title="Conocer más proyectos"
       />
-      <CardMore
+      <MoreCard
         class="border-r-cyan-200 border-r-4 hover:bg-cyan-200/20 dark:hover:bg-cyan-200/20 dark:border-r-cyan-500"
         text="Experiencia como"
         textColor="Freelancer"
         colorText="text-cyan-200 dark:text-cyan-500"
-        href="/"
+        href="/Experiencia"
         title="Conocer mi experiencia"
       />
 
-      <Age />
+      <AgeCard />
     </header>
   </section>
 </main>
