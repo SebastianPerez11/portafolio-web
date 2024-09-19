@@ -44,5 +44,26 @@ const { title } = Astro.props;
         );
       })();
     </script>
+    <script data-astro-rerun type="module">
+      document.addEventListener("DOMContentLoaded", () => {
+        const containerButtons = document.querySelector("#containerButtons");
+
+        if (containerButtons) {
+          containerButtons.addEventListener("mouseover", (e) => {
+            console.log(e);
+            const target = e.target;
+            if (target && target.tagName === "A") {
+              const padre = containerButtons.parentNode;
+              padre.classList.remove("bg-zinc-700");
+              padre.classList.remove("dark:bg-white");
+              padre.classList.add("bg-blue-200/20");
+              padre.classList.add("scale-[1.02]");
+            }
+          });
+        } else {
+          console.error("Element with id 'containerButtons' not found.");
+        }
+      });
+    </script>
   </body>
 </html>

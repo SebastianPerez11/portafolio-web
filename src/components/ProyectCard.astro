@@ -3,32 +3,33 @@ const { proyectTitle, description, pill, transitionName } = Astro.props;
 ---
 
 <section
-    transition:name={transitionName}
-    class=`sectionHover ${Astro.props.classCard} w-full row-span-2 border-l-4 rounded-lg border p-6 border-zinc-700 transition-transform bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
+  transition:name={transitionName}
+  class=`sectionHover ${Astro.props.classCard} w-full row-span-2 border-l-4 rounded-lg border p-6 border-zinc-700 transition-transform bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
 >
-    <div class="w-full flex justify-between items-center mb-5">
-        <span class=`${Astro.props.classColor} block w-5 h-5 rounded-full`>
-        </span>
-        <span
-            class=`${Astro.props.classColor} block w-max rounded-full dark:text-zinc-800 text-black font-bold px-4 py-[2px] text-base`
-            >{pill}</span
-        >
-    </div>
+  <div class="w-full flex justify-between items-center mb-5">
+    <span class=`${Astro.props.classColor} block w-5 h-5 rounded-full`> </span>
+    <span
+      class=`${Astro.props.classColor} block w-max rounded-full dark:text-zinc-800 text-black font-bold px-4 py-[2px] text-base`
+      >{pill}</span
+    >
+  </div>
 
-    <h2 class=`${Astro.props.classTitle} text-2xl font-bold mb-1`>
-        {proyectTitle}
-    </h2>
-    <p class="text-xl text-zinc-400 dark:text-zinc-700">
-        {description}
-    </p>
+  <h2 class=`${Astro.props.classTitle} text-2xl font-bold mb-1`>
+    {proyectTitle}
+  </h2>
+  <p class="text-xl text-zinc-400 dark:text-zinc-700">
+    {description}
+  </p>
 
-    <footer class="flex gap-5 text-lg items-center dark:text-black">
-        <slot name="buttonPrimary" />
-    </footer>
+  <footer
+    id="containerButtons"
+    class="flex gap-5 text-lg items-center dark:text-black"
+  >
+    <slot name="buttonPrimary" />
+  </footer>
 
-    <!-- <script data-astro-rerun type="module">
+  <!-- <script data-astro-rerun type="module">
         const hoverSections = document.querySelectorAll(".sectionHover");
-        const activeLinks = document.querySelectorAll(".linkHover");
 
         hoverSections.forEach((section) => {
             activeLinks.forEach((link) => {

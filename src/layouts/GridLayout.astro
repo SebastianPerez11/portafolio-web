@@ -8,6 +8,7 @@ import MoreCard from "../components/MoreCard.astro";
 import AgeCard from "../components/AgeCard.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
 import AboutCard from "../components/AboutCard.astro";
+import ProyectCard from "../components/ProyectCard.astro";
 ---
 
 <main
@@ -40,7 +41,7 @@ import AboutCard from "../components/AboutCard.astro";
 
       <DescriptionCard classCard="col-span-12 row-span-2 md:col-span-12 " />
 
-      <CardProyect
+      <ProyectCard
         transitionName="firstCard"
         classColor="bg-blue-200 dark:bg-blue-300"
         classCard="border-l-blue-200 dark:border-l-blue-500 md:col-span-7 col-span-12 "
@@ -67,7 +68,7 @@ import AboutCard from "../components/AboutCard.astro";
             classIcon="group-hover:fill-blue-200 dark:fill-zinc-800 dark:group-hover:fill-blue-800"
           /></slot
         >
-      </CardProyect>
+      </ProyectCard>
 
       <TecnologyCard classCard="col-span-5 row-span-2 " />
 
