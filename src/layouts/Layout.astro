@@ -24,7 +24,7 @@ const { title } = Astro.props;
       crossorigin
     />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title}</title>  
     <ViewTransitions />
   </head>
   <body
@@ -33,13 +33,13 @@ const { title } = Astro.props;
     <div
       class="absolute top-0 z-[-2] h-full w-full dark:bg-gray-50 dark:bg-[radial-gradient(ellipse_45%_120%_at_50%_50%,rgba(120,119,198,.8),rgba(255,255,255,0))] bg-[radial-gradient(ellipse_45%_120%_at_50%_50%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-neutral-950"
     >
-    </div>
-    <slot />
+                          </div>
+                          <slot />
     <script data-astro-rerun is:inline type="module">
-      (function () {
-        const storedTheme = localStorage.getItem("theme") || "light";
+                (function () {
+                  const storedTheme = localStorage.getItem("theme") || "light";
         document.documentElement.classList.toggle(
-          "dark",
+          "dark",   
           storedTheme === "dark"
         );
       })();
