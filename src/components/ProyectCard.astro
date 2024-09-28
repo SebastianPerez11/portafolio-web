@@ -9,15 +9,15 @@ const { proyectTitle, description, pill, transitionName } = Astro.props;
   <div class="w-full flex justify-between items-center mb-5">
     <span class=`${Astro.props.classColor} block w-5 h-5 rounded-full`> </span>
     <span
-      class=`${Astro.props.classColor} block w-max rounded-full dark:text-zinc-800 text-black font-bold px-4 py-[2px] text-base`
+      class=`${Astro.props.classColor} block w-max rounded-full dark:text-zinc-800 text-black font-bold px-4 py-[2px] text-base max-2xl:text-sm`
       >{pill}</span
     >
   </div>
 
-  <h2 class=`${Astro.props.classTitle} text-2xl font-bold mb-1`>
+  <h2 class=`${Astro.props.classTitle} text-2xl max-2xl:text-[20.5px] font-bold mb-1`>
     {proyectTitle}
   </h2>
-  <p class="text-xl text-zinc-400 dark:text-zinc-700">
+  <p class="text-xl max-2xl:text-[18.5px] text-zinc-400 dark:text-zinc-700">
     {description}
   </p>
 

@@ -7,13 +7,13 @@ const { pill, title, paragraph, textColor } = Astro.props;
   class=`nameSection dark:shadow-md col-span-12 row-span-2 p-6 rounded-lg dark:border-l-green-500 border-l-green-200 border-l-4 border border-zinc-700 dark:border-black/10 dark:bg-white dark:bg-opacity-30 bg-zinc-700 bg-opacity-50 transition-all ${Astro.props.classContainer}`
 >
   <span
-    class="block mb-5 w-max rounded-full dark:bg-green-300 bg-green-200 text-black font-bold px-3 py-[2px] text-base"
+    class="block mb-5 w-max rounded-full dark:bg-green-300 bg-green-200 text-black font-bold px-3 py-[2px] text-base max-2xl:text-sm"
     >{pill}</span
   >
-  <h1 class="text-[22.5px] font-bold dark:text-black text-white mb-2">
+  <h1 class="text-[22.5px] max-2xl:text-[20.5px] font-bold dark:text-black text-white mb-2">
     {title}
   </h1>
-  <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
+  <p class="text-zinc-400 dark:text-zinc-700 text-[22px] max-2xl:text-xl mb-1">
     <span class="text-green-100 dark:text-green-500"> {textColor}</span>
     {paragraph}
     <slot name="moreText" />

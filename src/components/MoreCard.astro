@@ -5,10 +5,11 @@ const { textColor, text, href, title } = Astro.props;
 <a
     title={title}
     href={href}
-    class=`${Astro.props.class} w-full flex items-center justify-center flex-col col-span-4 row-span-2 rounded-lg border border-zinc-700 p-6 hover:scale-105 transition-all bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
+    class=`${Astro.props.class} w-full flex items-start justify-center flex-col col-span-4 row-span-2 rounded-lg border border-zinc-700 p-6 hover:scale-105 transition-all bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
 >
-    <p class="text-pretty text-2xl text-white dark:text-zinc-800">
+    <p class="text-pretty text-2xl max-2xl:text-[20.5px] text-white dark:text-zinc-800">
         {text}
+        <br>
         <span class=`${Astro.props.colorText} font-bold`>{textColor}</span>
     </p>
 </a>
