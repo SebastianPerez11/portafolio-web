@@ -7,7 +7,7 @@ const { href, transitionName, title } = Astro.props;
     transition:name={transitionName}
     href={href}
     target="_blank"
-    class=`${Astro.props.classLink} dark:shadow-md p-6 flex justify-center items-center rounded-lg border border-zinc-700  bg-zinc-700 bg-opacity-50 dark:border-black/10 dark:bg-white dark:bg-opacity-30 hover:scale-105 transition-all cursor-pointer`
+    class=`${Astro.props.classLink} w-full dark:shadow-md p-6 md:py-9 flex justify-center items-center rounded-lg border border-zinc-700 bg-zinc-700 bg-opacity-50 dark:border-black/10 dark:bg-white dark:bg-opacity-30 hover:scale-105 transition-all cursor-pointer`
 >
     <slot name="icon" />
 </a>
