@@ -11,7 +11,7 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
     class="w-full min-h-screen h-full flex flex-col justify-center items-center"
   >
     <section
-      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
+      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center max-lg:px-10 max-sm:px-4 py-12 px-14 gap-10 text-white"
     >
       <header class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
         <AboutCard
@@ -23,12 +23,12 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
           href="./"
         >
           <slot slot="moreText">
-            <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
+            <p class="text-zinc-400 dark:text-zinc-700 text-[22px] max-2xl:text-xl mb-1">
               Principalmente me dedico a desarrollar paginas webs como
               freelancer e intento capacitarme constantemente, en todo lo
               relacionado a lo que es diseño y desarrollo web.
             </p>
-            <p class="text-zinc-400 dark:text-zinc-700 text-[22px] mb-1">
+            <p class="text-zinc-400 dark:text-zinc-700 text-[22px] max-2xl:text-xl mb-1">
               Mi objetivo es poder aportar valor y brindar mis conocimientos,
               dentro de una organizacion, ya sea participando de algun proyecto
               o seguir capacitandome, ya que estoy dispuesto a aprender nuevas
