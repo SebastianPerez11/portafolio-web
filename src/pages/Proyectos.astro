@@ -11,9 +11,9 @@ import DescriptionCard from "../components/DescriptionCard.astro";
     class="w-full min-h-screen h-full flex flex-col justify-center items-center"
   >
     <section
-      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center py-12 px-14 gap-10 text-white"
+      class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center max-lg:px-10 max-sm:px-4 py-12 px-14 gap-10 text-white"
     >
-      <header class="mx-auto grid max-w-6xl grid-flow-dense grid-cols-12 gap-4">
+      <header class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
         <div
           id="containerCards"
           class="grid grid-cols-auto-proyects gap-4 col-span-12"
@@ -132,7 +132,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
           </ProyectCard>
         </div>
 
-        <DescriptionCard classCard="col-span-12 row-span-2 md:col-span-8 ">
+        <DescriptionCard classCard="col-span-8 max-lg:col-span-12 max-md:col-span-12">
           <ButtonPrimary
             textLink="Volver al Inicio"
             href="./"
@@ -143,10 +143,10 @@ import DescriptionCard from "../components/DescriptionCard.astro";
         </DescriptionCard>
 
         <section
-          class="dark:shadow-md col-span-2 row-span-2 md:col-span-4 rounded-lg border border-zinc-700 dark:bg-white dark:bg-opacity-30 dark:border-black/10 bg-zinc-700 bg-opacity-50"
+          class="dark:shadow-md max-lg:h-60 col-span-4 max-lg:col-span-12 max-md:col-span-12 rounded-lg border border-zinc-700 dark:bg-white dark:bg-opacity-30 dark:border-black/10 bg-zinc-700 bg-opacity-50"
         >
           <img
-            class="h-full rounded-lg object-cover brightness-90"
+            class="h-full w-full rounded-lg object-cover brightness-90"
             src="/img/landing-page-dafa.jpg"
             alt=""
           />
