@@ -36,12 +36,15 @@ import ProyectCard from "../components/ProyectCard.astro";
         </slot>
       </AboutCard>
 
-      <ContactMeGroup classContainer="col-span-6 max-lg:col-span-12 max-md:col-span-12" />
+      <ContactMeGroup
+        classContainer="col-span-6 max-lg:col-span-12 max-md:col-span-12"
+      />
 
       <DescriptionCard classCard="col-span-12 row-span-2" />
 
       <ProyectCard
         transitionName="firstCard"
+        dataColor="bg-blue-100/20"
         classColor="bg-blue-200 dark:bg-blue-300"
         classCard="border-l-blue-200 dark:border-l-blue-500 col-span-7 max-lg:col-span-6 max-md:col-span-12"
         classTitle="text-blue-200 dark:text-blue-800"
@@ -69,9 +72,13 @@ import ProyectCard from "../components/ProyectCard.astro";
         >
       </ProyectCard>
 
-      <TecnologyCard classCard="col-span-5 max-lg:col-span-12 max-md:col-span-12 row-span-2" />
+      <TecnologyCard
+        classCard="col-span-5 max-lg:col-span-12 max-md:col-span-12 row-span-2"
+      />
 
-      <ButtonTheme class="col-span-2 max-lg:col-span-6 max-md:col-span-12 row-span-2" />
+      <ButtonTheme
+        class="col-span-2 max-lg:col-span-6 max-md:col-span-12 row-span-2"
+      />
 
       <MoreCard
         class="border-l-red-200 border-l-4 hover:bg-red-200/20 dark:hover:bg-red-200/20 dark:border-l-red-500 col-span-4 max-lg:col-span-6 max-md:col-span-12 row-span-2"
@@ -90,7 +97,9 @@ import ProyectCard from "../components/ProyectCard.astro";
         title="Conocer mi experiencia"
       />
 
-      <AgeCard class="col-span-2 max-lg:col-span-6 max-md:col-span-12 row-span-2" />
+      <AgeCard
+        class="col-span-2 max-lg:col-span-6 max-md:col-span-12 row-span-2"
+      />
     </header>
   </section>
 </main>

@@ -13,16 +13,20 @@ import DescriptionCard from "../components/DescriptionCard.astro";
     <section
       class="w-full h-full max-w-[1440px] flex flex-col items-center justify-center max-lg:px-10 max-sm:px-4 py-12 px-14 gap-10 text-white"
     >
-      <header class="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
+      <header
+        class="mx-auto grid max-w-5xl max-lg:max-w-4xl grid-flow-dense grid-cols-12 gap-4"
+      >
         <div
-          id="containerCards"
-          class="grid grid-cols-auto-proyects gap-4 col-span-12"
+          class="grid grid-cols-auto-proyects-max max-sm:grid-cols-auto-proyects gap-4 col-span-12"
         >
+          
+
           <ProyectCard
             transitionName="firstCard"
             classColor="bg-blue-200 dark:bg-blue-300"
             classCard="border-l-blue-200 dark:border-l-blue-500"
             classTitle="text-blue-200 dark:text-blue-800"
+            dataColor="bg-blue-100/20"
             pill="Ultimo proyecto"
             proyectTitle="Web - Dafa Seguros"
             description="Desarrollo de página web informativa para una empresa Productora Asesora de Seguros."
@@ -48,6 +52,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
           </ProyectCard>
 
           <ProyectCard
+            dataColor="bg-yellow-100/20"
             classColor="bg-yellow-100 dark:bg-yellow-300"
             classCard="border-l-yellow-200 dark:border-l-yellow-400"
             classTitle="text-yellow-50 dark:text-yellow-600"
@@ -76,6 +81,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
           </ProyectCard>
 
           <ProyectCard
+            dataColor="bg-red-100/20"
             classColor="bg-red-200 dark:bg-red-300"
             classCard="border-l-red-200 dark:border-l-red-500"
             classTitle="text-red-200 dark:text-red-700"
@@ -104,6 +110,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
           </ProyectCard>
 
           <ProyectCard
+            dataColor="bg-gray-100/20"
             classColor="bg-gray-200 dark:bg-gray-300"
             classCard="border-l-gray-200 dark:border-l-gray-500"
             classTitle="text-gray-200 dark:text-gray-800"
@@ -132,7 +139,9 @@ import DescriptionCard from "../components/DescriptionCard.astro";
           </ProyectCard>
         </div>
 
-        <DescriptionCard classCard="col-span-8 max-lg:col-span-12 max-md:col-span-12">
+        <DescriptionCard
+          classCard="col-span-8 max-lg:col-span-12 max-md:col-span-12"
+        >
           <ButtonPrimary
             textLink="Volver al Inicio"
             href="./"
@@ -152,7 +161,6 @@ import DescriptionCard from "../components/DescriptionCard.astro";
           />
         </section>
       </header>
-
     </section>
   </main>
 </Layout>

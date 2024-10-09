@@ -1,10 +1,11 @@
 ---
-const { proyectTitle, description, pill, transitionName } = Astro.props;
+const { proyectTitle, description, pill, transitionName, dataColor } = Astro.props;
 ---
 
 <section
   transition:name={transitionName}
-  class=`sectionHover ${Astro.props.classCard} w-full row-span-2 border-l-4 rounded-lg border p-6 border-zinc-700 transition-transform bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
+  data-color={dataColor}
+  class=`cardProyects ${Astro.props.classCard} w-full row-span-2 border-l-4 rounded-lg border p-6 border-zinc-700 transition-transform bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
 >
   <div class="w-full flex justify-between items-center mb-5">
     <span class=`${Astro.props.classColor} block w-5 h-5 rounded-full`> </span>
@@ -14,7 +15,9 @@ const { proyectTitle, description, pill, transitionName } = Astro.props;
     >
   </div>
 
-  <h2 class=`${Astro.props.classTitle} text-2xl max-2xl:text-[20.5px] font-bold mb-1`>
+  <h2
+    class=`${Astro.props.classTitle} text-2xl max-2xl:text-[20.5px] font-bold mb-1`
+  >
     {proyectTitle}
   </h2>
   <p class="text-xl max-2xl:text-[18.5px] text-zinc-400 dark:text-zinc-700">
@@ -22,35 +25,68 @@ const { proyectTitle, description, pill, transitionName } = Astro.props;
   </p>
 
   <footer
-    id="containerButtons"
-    class="flex gap-5 text-lg items-center dark:text-black"
+    class="containerLinks flex gap-5 text-lg items-center dark:text-black"
   >
     <slot name="buttonPrimary" />
   </footer>
+  <script data-astro-rerun type="module">
+    const cardProyects = document.querySelectorAll(".cardProyects");
 
+    cardProyects.forEach((cardProyect) => {
+      cardProyect.addEventListener("mouseover", (e) => {
+        const targetSection = e.target;
+        if (targetSection && targetSection.tagName === "A") {
+          const containerButton = targetSection.parentNode;
+          const containerProyect = containerButton.parentNode;
+          const color = containerProyect.getAttribute("data-color");
+          containerProyect.classList.remove("bg-zinc-700");
+          containerProyect.classList.remove("dark:bg-white");
+          containerProyect.classList.add(color);
+          containerProyect.classList.add("scale-[1.02]");
+        }
+      });
+    });
+
+    cardProyects.forEach((cardProyect) => {
+      cardProyect.addEventListener("mouseout", (e) => {
+        const targetSection = e.target;
+        if (targetSection && targetSection.tagName === "A") {
+          const containerButton = targetSection.parentNode;
+          const containerProyect = containerButton.parentNode;
+          const color = containerProyect.getAttribute("data-color");
+          containerProyect.classList.add("bg-zinc-700");
+          containerProyect.classList.add("dark:bg-white");
+          containerProyect.classList.remove(color);
+          containerProyect.classList.remove("scale-[1.02]");
+        }
+      });
+    });
+  </script>
   <!-- <script data-astro-rerun type="module">
-        const hoverSections = document.querySelectorAll(".sectionHover");
+    const containerButtons = document.querySelector(".containerLinks");
 
-        hoverSections.forEach((section) => {
-            activeLinks.forEach((link) => {
-                link.addEventListener("mouseover", () => {
-                    section.classList.remove("bg-zinc-700");
-                    section.classList.remove("dark:bg-white");
-                    section.classList.add("bg-blue-200/20");
-                    section.classList.add("scale-[1.02]");
-                });
-            });
-        });
+    if (containerButtons) {
+      containerButtons.addEventListener("mouseover", (e) => {
+        const target = e.target;
+        if (target && target.tagName === "A") {
+          const padre = containerButtons.parentNode;
+          padre.classList.remove("bg-zinc-700");
+          padre.classList.remove("dark:bg-white");
+          padre.classList.add("bg-blue-200/20");
+          padre.classList.add("scale-[1.02]");
+        }
+      });
 
-        hoverSections.forEach((section) => {
-            activeLinks.forEach((link) => {
-                link.addEventListener("mouseout", () => {
-                    section.classList.remove("bg-blue-200/20");
-                    section.classList.remove("scale-[1.02]");
-                    section.classList.add("bg-zinc-700");
-                    section.classList.add("dark:bg-white");
-                });
-            });
-        });
-    </script> -->
+      containerButtons.addEventListener("mouseout", (e) => {
+        const target = e.target;
+        if (target && target.tagName === "A") {
+          const padre = containerButtons.parentNode;
+          padre.classList.add("bg-zinc-700");
+          padre.classList.add("dark:bg-white");
+          padre.classList.remove("bg-blue-200/20");
+          padre.classList.remove("scale-[1.02]");
+        }
+      });
+    }
+  </script> -->
 </section>
