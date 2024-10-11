@@ -55,31 +55,30 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
           />
         </section>
 
-        <script data-astro-rerun is:inline type="module">
-          const nameSection = document.querySelector(".nameSection");
-          const moreLink = document.querySelector(".moreLink");
-
-          moreLink.addEventListener("mouseover", () => {
-            nameSection.classList.remove("bg-zinc-700");
-            nameSection.classList.add("bg-blue-100/20");
-            nameSection.classList.remove("dark:bg-white");
-            nameSection.classList.add("dark:bg-blue-100/30");
-            nameSection.classList.add("scale-[1.02]");
-          });
-
-          moreLink.addEventListener("mouseout", () => {
-            nameSection.classList.remove("bg-blue-100/20");
-            nameSection.classList.remove("dark:bg-blue-100/30");
-            nameSection.classList.remove("scale-[1.02]");
-            nameSection.classList.add("bg-zinc-700");
-            nameSection.classList.add("dark:bg-white");
-          });
-        </script>
-
         <TecnologyCard
           classCard="col-span-4 max-lg:col-span-12 max-md:col-span-12"
         />
       </header>
     </section>
+    <script data-astro-rerun is:inline type="module">
+      const nameSection = document.querySelector(".nameSection");
+      const moreLink = document.querySelector(".moreLink");
+
+      moreLink.addEventListener("mouseover", () => {
+        nameSection.classList.remove("bg-zinc-700");
+        nameSection.classList.add("bg-blue-100/20");
+        nameSection.classList.remove("dark:bg-white");
+        nameSection.classList.add("dark:bg-blue-100/30");
+        nameSection.classList.add("scale-[1.02]");
+      });
+
+      moreLink.addEventListener("mouseout", () => {
+        nameSection.classList.remove("bg-blue-100/20");
+        nameSection.classList.remove("dark:bg-blue-100/30");
+        nameSection.classList.remove("scale-[1.02]");
+        nameSection.classList.add("bg-zinc-700");
+        nameSection.classList.add("dark:bg-white");
+      });
+    </script>
   </main>
 </Layout>
