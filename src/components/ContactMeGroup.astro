@@ -3,6 +3,7 @@ import IconMail from "../assets/icons/IconMail.astro";
 import IconGitHub from "../assets/icons/IconGitHub.astro";
 import IconLinkedin from "../assets/icons/IconLinkedin.astro";
 import IconInstagram from "../assets/icons/IconInstagram.astro";
+import IconCv from "../assets/icons/IconCv.astro";
 
 import IconContact from "./IconContact.astro";
 ---
@@ -17,7 +18,7 @@ import IconContact from "./IconContact.astro";
     href="https://github.com/SebastianPerez11"
   >
     <slot slot="icon">
-      <IconGitHub class="w-10 max-2xl:w-9 fill-white dark:fill-black/80" />
+      <IconGitHub class="w-11 max-2xl:w-9 fill-white dark:fill-black/80" />
     </slot>
   </IconContact>
   <IconContact
@@ -41,13 +42,13 @@ import IconContact from "./IconContact.astro";
     </slot>
   </IconContact>
   <IconContact
-    title="Ir a Instagram"
+    title="Ver Curriculum"
     classLink="dark:hover:bg-pink-300/40 hover:bg-pink-300/20"
-    transitionName="iconInstagram"
-    href="/"
+    transitionName="iconCv"
+    href="https://www.dropbox.com/scl/fi/s3h2hgk8rbh4yeish8y7w/Cv-2024.pdf?rlkey=3lr036e71lsx2m30hy7m0ychn&st=ch6b8m2f&dl=0"
   >
     <slot slot="icon">
-      <IconInstagram class="w-9 max-2xl:w-8 fill-white dark:fill-black/80" />
+      <IconCv class="w-10 max-2xl:w-8 fill-white dark:fill-black/80" />
     </slot>
   </IconContact>
 </section>
