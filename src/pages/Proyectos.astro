@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import ProyectCard from "../components/ProyectCard.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
 import DescriptionCard from "../components/DescriptionCard.astro";
+import Image from "astro/components/Image.astro";
+import DafaImage from "../../public/img/landing-page-dafa.jpg";
 ---
 
 <Layout title="Todos los Proyectos">
@@ -112,7 +114,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
             classColor="bg-gray-200 dark:bg-gray-300"
             classCard="border-l-gray-200 dark:border-l-gray-500"
             classTitle="text-gray-200 dark:text-gray-800"
-            pill="Individual"
+            pill="En desarrollo"
             proyectTitle="Landing Page - LZC"
             description="Desarrollo de landing page informativa para una empresa Constructora en Argentina."
           >
@@ -120,7 +122,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
               <ButtonPrimary
                 target="_blank"
                 textLink="Ver sitio"
-                href="https://dafasesoresdeseguros.com.ar/"
+                href="https://landing-page-lzc.vercel.app/"
                 title="Ver sitio"
                 classLink="linkHover hover:text-gray-200 dark:hover:text-gray-800"
                 classIcon="group-hover:fill-gray-200 dark:fill-zinc-800 dark:group-hover:fill-gray-800"
@@ -128,7 +130,7 @@ import DescriptionCard from "../components/DescriptionCard.astro";
               <ButtonPrimary
                 target="_blank"
                 textLink="Ver repositorio"
-                href="https://github.com/SebastianPerez11/df-seguros-web"
+                href="https://github.com/SebastianPerez11/landing-page-lzc"
                 title="Ver repositorio"
                 classLink="linkHover hover:text-gray-200 dark:hover:text-gray-800"
                 classIcon="group-hover:fill-gray-200 dark:fill-zinc-800 dark:group-hover:fill-gray-800"
@@ -152,10 +154,12 @@ import DescriptionCard from "../components/DescriptionCard.astro";
         <section
           class="dark:shadow-md max-lg:h-60 col-span-4 max-lg:col-span-12 max-md:col-span-12 rounded-lg border border-zinc-700 dark:bg-white dark:bg-opacity-30 dark:border-black/10 bg-zinc-700 bg-opacity-50"
         >
-          <img
+          <Image
+            loading="lazy"
+            src={DafaImage}
+            title="Landing Page - Dafa seguros"
+            alt="Imagen de Landing Page de Dafa Seguros"
             class="h-full w-full rounded-lg object-cover brightness-90"
-            src="/img/landing-page-dafa.jpg"
-            alt=""
           />
         </section>
       </header>

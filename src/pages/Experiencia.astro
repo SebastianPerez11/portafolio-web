@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import TecnologyCard from "../components/TecnologyCard.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
+import Image from "astro/components/Image.astro";
+import ExperienceImage from "../../public/img/experienceDate.jpg";
 ---
 
 <Layout title="Todos los Proyectos">
@@ -18,10 +20,12 @@ import ButtonPrimary from "../components/ButtonPrimary.astro";
         <section
           class="dark:shadow-md h-96 max-2xl:h-80 col-span-12 max-lg:col-span-12 max-md:col-span-12 rounded-lg border border-zinc-700 dark:bg-white dark:bg-opacity-30 dark:border-black/10 bg-zinc-700 bg-opacity-50"
         >
-          <img
+          <Image
+            src={ExperienceImage}
+            alt="Imagen del diseño de una Landing Page"
+            title="Diseño de Landing Page"
             class="h-full w-full rounded-lg object-cover"
-            src="/img/experienceDate.jpg"
-            alt=""
+            loading="lazy"
           />
         </section>
 
