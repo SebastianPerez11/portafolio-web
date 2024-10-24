@@ -19,7 +19,7 @@ Este sitio web fue desarrollador a partir de la combinacion de todas las tecnolo
 
 ### Deploy
 
-[https://dafasesoresdeseguros.com.ar/](https://portafolio-web-sp.vercel.app/)
+https://portafolio-web-sp.vercel.app/
 
 ### Contacto de Desarrolladores/as
 
