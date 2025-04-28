@@ -4,7 +4,6 @@ import ProyectCard from "../components/ProyectCard.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
 import DescriptionCard from "../components/DescriptionCard.astro";
 import Image from "astro/components/Image.astro";
-import DafaImage from "../../public/img/landing-page-dafa.jpg";
 ---
 
 <Layout title="Todos los Proyectos">
@@ -22,7 +21,7 @@ import DafaImage from "../../public/img/landing-page-dafa.jpg";
           class="grid grid-cols-auto-proyects-max max-sm:grid-cols-auto-proyects gap-4 col-span-12"
         >
           <ProyectCard
-            transitionName="firstCard"
+          
             classColor="bg-blue-200 dark:bg-blue-300"
             classCard="border-l-blue-200 dark:border-l-blue-500"
             classTitle="text-blue-200 dark:text-blue-800"
@@ -154,9 +153,9 @@ import DafaImage from "../../public/img/landing-page-dafa.jpg";
         <section
           class="dark:shadow-md max-lg:h-60 col-span-4 max-lg:col-span-12 max-md:col-span-12 rounded-lg border border-zinc-700 dark:bg-white dark:bg-opacity-30 dark:border-black/10 bg-zinc-700 bg-opacity-50"
         >
-          <Image
+          <img
             loading="lazy"
-            src={DafaImage}
+            src="/img/landing-page-dafa.jpg"
             title="Landing Page - Dafa seguros"
             alt="Imagen de Landing Page de Dafa Seguros"
             class="h-full w-full rounded-lg object-cover brightness-90"

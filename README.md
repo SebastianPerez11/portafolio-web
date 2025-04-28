@@ -16,7 +16,6 @@ Este sitio web fue desarrollador a partir de la combinacion de todas las tecnolo
 - Vercel
 - API View Transition
 
-
 ### Deploy
 
 https://portafolio-web-sp.vercel.app/

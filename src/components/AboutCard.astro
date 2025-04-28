@@ -1,5 +1,15 @@
 ---
-const { pill, title, paragraph, textColor } = Astro.props;
+
+export interface Props {
+  pill?: string;
+  paragraph?: string;
+  title?: string;
+  textColor?: string;
+  classContainer?: string;
+  textLink?: string;
+  herf?: string;
+}
+
 ---
 
 <section
@@ -8,14 +18,14 @@ const { pill, title, paragraph, textColor } = Astro.props;
 >
   <span
     class="block mb-5 w-max rounded-full dark:bg-green-300 bg-green-200 text-black font-bold px-3 py-[2px] text-base max-2xl:text-sm"
-    >{pill}</span
+    >{Astro.props.pill}</span
   >
   <h1 class="text-[22.5px] max-2xl:text-[20.5px] font-bold dark:text-black text-white mb-2">
-    {title}
+    {Astro.props.title}
   </h1>
   <p class="text-zinc-400 dark:text-zinc-700 text-[22px] max-2xl:text-xl mb-1">
-    <span class="text-green-100 dark:text-green-600"> {textColor}</span>
-    {paragraph}
+    <span class="text-green-100 dark:text-green-600"> {Astro.props.textColor}</span>
+    {Astro.props.paragraph}
     <slot name="moreText" />
   </p>
   <slot name="buttonPrimary" />

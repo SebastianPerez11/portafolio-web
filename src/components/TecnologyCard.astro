@@ -7,15 +7,23 @@ import IconVercel from "../assets/icons/IconVercel.astro";
 import IconAstro from "../assets/icons/IconAstro.astro";
 import IconTailwind from "../assets/icons/IconTailwind.astro";
 import IconGit from "../assets/icons/IconGit.astro";
+
+export interface Props {
+  classCard?: string;
+}
 ---
 
 <section
   transition:name="tecnologySection"
   class=`${Astro.props.classCard} w-full flex flex-col gap-6 rounded-lg border border-zinc-700 p-6 bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
 >
-  <p class="flex flex-col text-[22px] max-2xl:text-xl text-pretty text-white dark:text-black">
-    <span class="text-4xl max-2xl:text-3xl font-bold text-blue-200 dark:text-blue-500">+2</span> Años
-    de Experiencia
+  <p
+    class="flex flex-col text-[22px] max-2xl:text-xl text-pretty text-white dark:text-black"
+  >
+    <span
+      class="text-4xl max-2xl:text-3xl font-bold text-blue-200 dark:text-blue-500"
+      >+2</span
+    > Años de Experiencia
   </p>
   <footer class="w-full grid grid-cols-auto-tecnology gap-4">
     <IconHtml

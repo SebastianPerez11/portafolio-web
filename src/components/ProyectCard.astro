@@ -1,27 +1,34 @@
 ---
-const { proyectTitle, description, pill, transitionName, dataColor } = Astro.props;
+export interface Props {
+  dataColor?: string;
+  classCard?: string;
+  classColor?: string;
+  pill?: string;
+  classTitle?: string;
+  description?: string;
+  proyectTitle: string;
+}
 ---
 
 <section
-  transition:name={transitionName}
-  data-color={dataColor}
+  data-color={Astro.props.dataColor}
   class=`cardProyects ${Astro.props.classCard} w-full row-span-2 border-l-4 rounded-lg border p-6 border-zinc-700 transition-transform bg-zinc-700 bg-opacity-50 dark:bg-white dark:bg-opacity-30 dark:border-black/10 dark:shadow-md`
 >
   <div class="w-full flex justify-between items-center mb-5">
     <span class=`${Astro.props.classColor} block w-5 h-5 rounded-full`> </span>
     <span
       class=`${Astro.props.classColor} block w-max rounded-full dark:text-zinc-800 text-black font-bold px-4 py-[2px] text-base max-2xl:text-sm`
-      >{pill}</span
+      >{Astro.props.pill}</span
     >
   </div>
 
   <h2
     class=`${Astro.props.classTitle} text-2xl max-2xl:text-[20.5px] font-bold mb-1`
   >
-    {proyectTitle}
+    {Astro.props.proyectTitle}
   </h2>
   <p class="text-xl max-2xl:text-[18.5px] text-zinc-400 dark:text-zinc-700">
-    {description}
+    {Astro.props.description}
   </p>
 
   <footer
